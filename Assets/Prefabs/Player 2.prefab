@@ -142,15 +142,6 @@ MonoBehaviour:
   speed: 10
   jumpAmount: 9
   Grounded: 0
-  JumpAction:
-    m_Name: Jump
-    m_Type: 0
-    m_ExpectedControlType: 
-    m_Id: 46dda2b8-65a3-4ddf-bb7b-827a8cefacda
-    m_Processors: 
-    m_Interactions: 
-    m_SingletonActionBindings: []
-    m_Flags: 0
 --- !u!114 &4507245842764869883
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -236,7 +227,7 @@ MonoBehaviour:
   Repositioned: 1
   ignoreObstacleCollision: 0
   ObstacleColliders: []
-  DurationOfInvulnurability: 0
+  DurationOfInvulnurability: 3
 --- !u!114 &-1932371491197018163
 MonoBehaviour:
   m_ObjectHideFlags: 0

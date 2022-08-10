@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class SpikeDeathController : MonoBehaviour
 {
+    public Respawn playerrespawn;
     // Start is called before the first frame update
     void Start()
     {
@@ -18,9 +19,10 @@ public class SpikeDeathController : MonoBehaviour
 
    void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Spike"))
+        playerrespawn = collision.gameObject.GetComponent<Respawn>();
+        if (collision.gameObject.CompareTag("Player") && !playerrespawn.ignoreObstacleCollision)
         {
-
+            collision.gameObject.SetActive(false);
         }
     }
 }
