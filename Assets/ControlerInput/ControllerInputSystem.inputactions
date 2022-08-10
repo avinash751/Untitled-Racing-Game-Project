@@ -1,0 +1,102 @@
+{
+    "name": "ControllerInputSystem",
+    "maps": [
+        {
+            "name": "Player_1",
+            "id": "1280705c-a876-4c7e-8744-4bffc72cd7fc",
+            "actions": [
+                {
+                    "name": "Jump1",
+                    "type": "Button",
+                    "id": "ca8a6567-fc35-49a1-8f95-5554abd32625",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "DashDown1",
+                    "type": "Button",
+                    "id": "19a87445-b93a-4734-ab86-01b41c7b912d",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "2b2a1809-adc3-4cab-88f8-dfab9888e01f",
+                    "path": "<Gamepad>/dpad/right",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Jump1",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "1d3ee93d-df66-4d41-8fb4-5c043b1298d5",
+                    "path": "<Gamepad>/dpad/left",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "DashDown1",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        },
+        {
+            "name": "Player2",
+            "id": "7f4fe0b3-9f66-4219-98d5-74cba8ca80b3",
+            "actions": [
+                {
+                    "name": "Jump2",
+                    "type": "Button",
+                    "id": "cb494666-11e5-4658-ba28-e0745ce43f7f",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "DashDown2",
+                    "type": "Button",
+                    "id": "a2bf692b-0fde-4f79-a8ff-7e177cc56fed",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "404efbda-2d58-4644-8fbc-6a1d06583827",
+                    "path": "<Gamepad>/buttonEast",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Jump2",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "3f1fe034-6978-4920-9866-127cbfe2d063",
+                    "path": "<Gamepad>/buttonWest",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "DashDown2",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}
