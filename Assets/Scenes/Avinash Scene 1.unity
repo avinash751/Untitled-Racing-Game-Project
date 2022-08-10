@@ -721,6 +721,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -6701535874981910141, guid: 8824c270c9ef31c4f864662d1b144b76, type: 3}
+      propertyPath: DurationOfInvulnurability
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 4507245842764869862, guid: 8824c270c9ef31c4f864662d1b144b76, type: 3}
       propertyPath: m_RootOrder
       value: 2
