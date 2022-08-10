@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class Camerahumaid : MonoBehaviour
 {
-
-    public GameObject firsttouchCam;
+    public float speed;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -15,6 +15,7 @@ public class Camerahumaid : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.position = new Vector3 (firsttouchCam.transform.position.x, transform.position.y, transform.position.z);
+
+        transform.Translate(Vector2.right * Time.deltaTime * speed);
     }
 }
