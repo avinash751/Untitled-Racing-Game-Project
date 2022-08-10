@@ -61,4 +61,25 @@ public class Controls : MonoBehaviour
         yield return new WaitForSeconds(DashingCooldown);
         canDash = true;
     }
+
+
+    public void JumpImplementation()
+    {
+        if(Grounded)
+        {
+            rb.AddForce(Vector2.up * jumpAmount, ForceMode2D.Impulse);
+            Grounded = false;
+        }
+       
+    }
+
+    public void DashDownImplementation()
+    {
+        if(canDash)
+        {
+            StartCoroutine(DashingDown());
+        }
+       
+    }
+
 }
