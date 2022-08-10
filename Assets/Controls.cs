@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class Controls : MonoBehaviour
 {
@@ -14,15 +15,18 @@ public class Controls : MonoBehaviour
     float DashingTime = 0.3f;
     float DashingCooldown = 1f;
 
-
+    
     void Start()
     {
+        
         Grounded = true;
         rb = GetComponent<Rigidbody2D>();   
+        
     }
 
     void Update()
     {
+       
         if(isDashing)
         {
             return;
