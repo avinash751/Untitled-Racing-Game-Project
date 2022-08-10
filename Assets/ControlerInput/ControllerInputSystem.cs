@@ -98,7 +98,7 @@ public partial class @ControllerInputSystem : IInputActionCollection2, IDisposab
                 {
                     ""name"": """",
                     ""id"": ""404efbda-2d58-4644-8fbc-6a1d06583827"",
-                    ""path"": ""<Gamepad>/buttonEast"",
+                    ""path"": ""<Gamepad>/buttonWest"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -109,7 +109,7 @@ public partial class @ControllerInputSystem : IInputActionCollection2, IDisposab
                 {
                     ""name"": """",
                     ""id"": ""3f1fe034-6978-4920-9866-127cbfe2d063"",
-                    ""path"": ""<Gamepad>/buttonWest"",
+                    ""path"": ""<Gamepad>/buttonEast"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
