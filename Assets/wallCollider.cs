@@ -26,8 +26,11 @@ public class wallCollider : MonoBehaviour
         if (collision.gameObject.tag == "Player")
         {
             collision.gameObject.SetActive(false);
+
+            Debug.Log ("object disabled");
         }
     }
 
+   
 
 }
