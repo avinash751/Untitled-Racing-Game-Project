@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 4507245842764869881}
   - component: {fileID: 4507245842764869882}
   - component: {fileID: 4507245842764869883}
+  - component: {fileID: -6701535874981910141}
   m_Layer: 0
   m_Name: Player 2
   m_TagString: Untagged
@@ -210,3 +211,18 @@ MonoBehaviour:
   m_DefaultActionMap: Player2
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
+--- !u!114 &-6701535874981910141
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4507245842764869884}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02e9cfb6b27c7dd4fb77b1eb6bf79504, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Repositioned: 1
+  ignoreObstacleCollision: 0
+  ObstacleCollider: {fileID: 3922175574686112036, guid: 1c9bbcf5a357a88469b9dfdc9eafc1f7, type: 3}
