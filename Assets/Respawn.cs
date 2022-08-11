@@ -5,7 +5,7 @@ using UnityEngine;
 public class Respawn : MonoBehaviour
 {
     [SerializeField] bool Repositioned;
-    [SerializeField] public bool ignoreObstacleCollision;
+    [SerializeField] bool ignoreObstacleCollision;
     [SerializeField] List<Collider2D> ObstacleColliders = new List<Collider2D>();
     [SerializeField] float DurationOfInvulnurability;
     bool runOnce;

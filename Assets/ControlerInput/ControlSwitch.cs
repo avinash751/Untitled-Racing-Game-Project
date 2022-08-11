@@ -1,12 +1,18 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
-public class SpikeDeathController : MonoBehaviour
+public class ControlSwitch : MonoBehaviour
 {
+
+    
+
+    
     // Start is called before the first frame update
     void Start()
     {
+      
         
     }
 
@@ -14,13 +20,5 @@ public class SpikeDeathController : MonoBehaviour
     void Update()
     {
         
-    }
-
-   void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (collision.gameObject.CompareTag("Spike"))
-        {
-
-        }
     }
 }
