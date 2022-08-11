@@ -10,6 +10,8 @@ public class ControllerInput : MonoBehaviour
     [Header("Player  Input")]
     public InputAction JumpAction;
     public InputAction DashAction;
+    public string Button1;
+    public string Button2;
 
 
 
@@ -22,7 +24,7 @@ public class ControllerInput : MonoBehaviour
     {
        PlayerControl= GetComponent<Controls>();
         EnablingInput(false);
- 
+        ChnageInput();
         EnablingInput(true);
         AssigningFunctionToInputAction();
     }
@@ -51,5 +53,12 @@ public class ControllerInput : MonoBehaviour
             DashAction.Disable();
         }
     }
- 
+
+    void ChnageInput()
+    {
+
+        JumpAction.ChangeBinding(0).WithPath("<Gamepad>/"+ Button1);
+        DashAction.ChangeBinding(0).WithPath("<Gamepad>/"+ Button2);
+        // Change path to space key.
+    }
 }

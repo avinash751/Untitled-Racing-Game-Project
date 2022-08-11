@@ -33,7 +33,7 @@ public class Controls : MonoBehaviour
         }
         transform.Translate(Vector2.right * Time.deltaTime * speed);
         
-        if(Input.GetKeyDown(KeyCode.Space) && Grounded)
+        if(Input.GetKeyDown(KeyCode.U) && Grounded)
         {
             //allow the player to jump once until theyre gronuded again
 
