@@ -156,8 +156,8 @@ MonoBehaviour:
       m_Action: Dash
       m_Flags: 0
     m_Flags: 0
-  Button1: 
-  Button2: 
+  Button1: LeftStick/Right
+  Button2: LeftStick/Left
   PlayerControl: {fileID: 0}
 --- !u!70 &493523448001073409
 CapsuleCollider2D:

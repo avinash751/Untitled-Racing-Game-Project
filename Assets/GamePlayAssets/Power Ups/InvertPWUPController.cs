@@ -6,13 +6,12 @@ using UnityEngine.InputSystem;
 public class InvertPWUPController : MonoBehaviour
 {
     PlayerInput player;
-    ControllerInputSystem controller;
+   
 
     // Start is called before the first frame update
     void Start()
     {
-        player = gameObject.GetComponent<PlayerInput>();
-        controller.Player_1.Disable();
+        
     }
 
     // Update is called once per frame

@@ -778,14 +778,6 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4273936959716549971, guid: 8b65bef9d83ad0747b06b66c39efa103, type: 3}
-      propertyPath: Button1
-      value: LeftStick/Right
-      objectReference: {fileID: 0}
-    - target: {fileID: 4273936959716549971, guid: 8b65bef9d83ad0747b06b66c39efa103, type: 3}
-      propertyPath: Button2
-      value: LeftStick/Left
-      objectReference: {fileID: 0}
-    - target: {fileID: 4273936959716549971, guid: 8b65bef9d83ad0747b06b66c39efa103, type: 3}
       propertyPath: DashAction.m_SingletonActionBindings.Array.size
       value: 1
       objectReference: {fileID: 0}

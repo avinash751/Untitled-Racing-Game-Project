@@ -27,6 +27,7 @@ public class ControllerInput : MonoBehaviour
         ChnageInput();
         EnablingInput(true);
         AssigningFunctionToInputAction();
+        GetComponent<PlayerInput>().actions = null;
     }
     void Start()
     {

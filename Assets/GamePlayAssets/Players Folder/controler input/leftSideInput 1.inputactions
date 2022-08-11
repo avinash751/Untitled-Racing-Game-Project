@@ -1,23 +1,23 @@
 {
-    "name": "ControllerInputSystem",
+    "name": "leftSideInput",
     "maps": [
         {
-            "name": "Player_1",
-            "id": "1280705c-a876-4c7e-8744-4bffc72cd7fc",
+            "name": "Normal",
+            "id": "6a0d602c-839d-4fb0-8496-c03eb4b55820",
             "actions": [
                 {
-                    "name": "Jump1",
+                    "name": "jump",
                     "type": "Button",
-                    "id": "ca8a6567-fc35-49a1-8f95-5554abd32625",
+                    "id": "d25a83ab-0615-46d8-8deb-f7b8adfa4c8b",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
                 },
                 {
-                    "name": "DashDown1",
+                    "name": "DashDown",
                     "type": "Button",
-                    "id": "19a87445-b93a-4734-ab86-01b41c7b912d",
+                    "id": "61a8d3e1-67d1-44b1-8946-c49a5a498a0f",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
@@ -27,45 +27,45 @@
             "bindings": [
                 {
                     "name": "",
-                    "id": "2b2a1809-adc3-4cab-88f8-dfab9888e01f",
+                    "id": "893859ec-2f2d-489c-bb83-ed7073a85b4c",
                     "path": "<Gamepad>/dpad/right",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Jump1",
+                    "action": "jump",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
                 {
                     "name": "",
-                    "id": "1d3ee93d-df66-4d41-8fb4-5c043b1298d5",
+                    "id": "d6bd001b-1109-4ba2-8c7b-48eec9c974d3",
                     "path": "<Gamepad>/dpad/left",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "DashDown1",
+                    "action": "DashDown",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
             ]
         },
         {
-            "name": "Player2",
-            "id": "7f4fe0b3-9f66-4219-98d5-74cba8ca80b3",
+            "name": "inverted",
+            "id": "d1ffd256-b209-4690-8dc6-8c81a490e239",
             "actions": [
                 {
-                    "name": "Jump2",
+                    "name": "JumpInverted",
                     "type": "Button",
-                    "id": "cb494666-11e5-4658-ba28-e0745ce43f7f",
+                    "id": "7627e96d-b429-4fde-8a89-245cef16ebb6",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
                 },
                 {
-                    "name": "DashDown2",
+                    "name": "DashDownInverted",
                     "type": "Button",
-                    "id": "a2bf692b-0fde-4f79-a8ff-7e177cc56fed",
+                    "id": "ffb7dde5-8da3-40ea-a9d9-f8d08352be64",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
@@ -75,23 +75,23 @@
             "bindings": [
                 {
                     "name": "",
-                    "id": "404efbda-2d58-4644-8fbc-6a1d06583827",
-                    "path": "<Gamepad>/buttonWest",
+                    "id": "3a71ec88-519c-4eb7-80d5-f84431d8771b",
+                    "path": "<Gamepad>/dpad/left",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Jump2",
+                    "action": "JumpInverted",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
                 {
                     "name": "",
-                    "id": "3f1fe034-6978-4920-9866-127cbfe2d063",
-                    "path": "<Gamepad>/buttonEast",
+                    "id": "3d02c1df-73fe-4ad3-a147-2d334d11f6f9",
+                    "path": "<Gamepad>/dpad/right",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "DashDown2",
+                    "action": "DashDownInverted",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
