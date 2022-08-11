@@ -14,10 +14,9 @@ GameObject:
   - component: {fileID: 4273936959716549971}
   - component: {fileID: 493523448001073409}
   - component: {fileID: 493523448001073408}
-  - component: {fileID: 493523448001073421}
   - component: {fileID: -405093380057160565}
   m_Layer: 0
-  m_Name: Player
+  m_Name: Player 1
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -133,7 +132,7 @@ MonoBehaviour:
     m_SingletonActionBindings:
     - m_Name: 
       m_Id: 0a2d3746-7962-4b5c-8eca-06a75cd8ccaa
-      m_Path: <Gamepad>/dpad/right
+      m_Path: <Gamepad>/leftStick/right
       m_Interactions: 
       m_Processors: 
       m_Groups: 
@@ -150,13 +149,15 @@ MonoBehaviour:
     m_SingletonActionBindings:
     - m_Name: 
       m_Id: d67da3ed-01d2-4d50-967d-07cf9b520d51
-      m_Path: <Gamepad>/dpad/left
+      m_Path: <Gamepad>/leftStick/left
       m_Interactions: 
       m_Processors: 
       m_Groups: 
       m_Action: Dash
       m_Flags: 0
     m_Flags: 0
+  Button1: 
+  Button2: 
   PlayerControl: {fileID: 0}
 --- !u!70 &493523448001073409
 CapsuleCollider2D:
@@ -189,76 +190,6 @@ MonoBehaviour:
   speed: 1
   jumpAmount: 9
   Grounded: 0
---- !u!114 &493523448001073421
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 493523448001073411}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Actions: {fileID: -944628639613478452, guid: c717782c00bda1d4db855f07b328f247, type: 3}
-  m_NotificationBehavior: 2
-  m_UIInputModule: {fileID: 0}
-  m_DeviceLostEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_DeviceRegainedEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_ControlsChangedEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_ActionEvents:
-  - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 493523448001073408}
-        m_TargetAssemblyTypeName: Controls, Assembly-CSharp
-        m_MethodName: JumpImplementation
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_ActionId: ca8a6567-fc35-49a1-8f95-5554abd32625
-    m_ActionName: Player_1/Jump1[/XInputControllerWindows/dpad/right]
-  - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 493523448001073408}
-        m_TargetAssemblyTypeName: Controls, Assembly-CSharp
-        m_MethodName: DashDownImplementation
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_ActionId: 19a87445-b93a-4734-ab86-01b41c7b912d
-    m_ActionName: Player_1/DashDown1[/XInputControllerWindows/dpad/left]
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: cb494666-11e5-4658-ba28-e0745ce43f7f
-    m_ActionName: Player2/Jump2[/XInputControllerWindows/buttonEast]
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: a2bf692b-0fde-4f79-a8ff-7e177cc56fed
-    m_ActionName: Player2/DashDown2[/XInputControllerWindows/buttonWest]
-  m_NeverAutoSwitchControlSchemes: 0
-  m_DefaultControlScheme: 
-  m_DefaultActionMap: Player_1
-  m_SplitScreenIndex: -1
-  m_Camera: {fileID: 0}
 --- !u!114 &-405093380057160565
 MonoBehaviour:
   m_ObjectHideFlags: 0
