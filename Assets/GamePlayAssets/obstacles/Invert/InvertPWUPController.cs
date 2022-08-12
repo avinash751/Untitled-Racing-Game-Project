@@ -7,6 +7,7 @@ public class InvertPWUPController : MonoBehaviour
 {
     PlayerInput playercontrol;
     bool controlinvert;
+    public float time;
 
     void OnTriggerEnter2D(Collider2D collision)
     {
@@ -17,19 +18,28 @@ public class InvertPWUPController : MonoBehaviour
             playercontrol.actions.FindActionMap("Normal").Disable();
             controlinvert = true;
 
+            Invoke(nameof(disableinvertcontrols), time);
+
            
+        
         }
         else
         {
             playercontrol.actions.FindActionMap("Inverted").Disable();
             playercontrol.actions.FindActionMap("Normal").Enable();
             controlinvert = false;
+
+
         }
+
+
     }
-
-
-    void INvert()
+    // humaid's code
+    void disableinvertcontrols()
     {
+        playercontrol.actions.FindActionMap("Inverted").Disable();
+        playercontrol.actions.FindActionMap("Normal").Enable();
 
+        Debug.Log("it works");
     }
 }
