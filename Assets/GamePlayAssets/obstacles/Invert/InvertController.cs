@@ -16,6 +16,8 @@ public class InvertPWUPController : MonoBehaviour
             playercontrol.actions.FindActionMap("Inverted").Enable();
             playercontrol.actions.FindActionMap("Normal").Disable();
             controlinvert = true;
+
+           
         }
         else
         {
@@ -23,5 +25,11 @@ public class InvertPWUPController : MonoBehaviour
             playercontrol.actions.FindActionMap("Normal").Enable();
             controlinvert = false;
         }
+    }
+
+
+    void INvert()
+    {
+
     }
 }
