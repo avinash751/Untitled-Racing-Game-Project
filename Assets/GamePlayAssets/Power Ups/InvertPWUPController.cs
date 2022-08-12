@@ -6,7 +6,6 @@ using UnityEngine.InputSystem;
 public class InvertController : MonoBehaviour
 {
     PlayerInput playercontrol;
-    bool controlinvert;
 
     void OnTriggerEnter2D(Collider2D collision)
     {
@@ -15,13 +14,11 @@ public class InvertController : MonoBehaviour
         {
             playercontrol.actions.FindActionMap("Inverted").Enable();
             playercontrol.actions.FindActionMap("Normal").Disable();
-            controlinvert = true;
         }
         else
         {
             playercontrol.actions.FindActionMap("Inverted").Disable();
             playercontrol.actions.FindActionMap("Normal").Enable();
-            controlinvert = false;
         }
     }
 }
