@@ -55,14 +55,11 @@ public class Respawn : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if(ignoreObstacleCollision)
+        if(ignoreObstacleCollision && collision.gameObject.tag != "Ground")
         {
-            if(collision.gameObject.tag == "Spike")
-            {
-                ObstacleColliders.Add(collision.gameObject.GetComponent<Collider2D>());
-            }
+            ObstacleColliders.Add(collision.gameObject.GetComponent<Collider2D>());
 
-            foreach(Collider2D obstacle in ObstacleColliders)
+            foreach (Collider2D obstacle in ObstacleColliders)
             {
                 Physics2D.IgnoreCollision(gameObject.GetComponent<Collider2D>(), obstacle);
             }

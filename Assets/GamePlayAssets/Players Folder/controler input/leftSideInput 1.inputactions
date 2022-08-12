@@ -9,9 +9,9 @@
                     "name": "jump",
                     "type": "Value",
                     "id": "d25a83ab-0615-46d8-8deb-f7b8adfa4c8b",
-                    "expectedControlType": "Button",
+                    "expectedControlType": "Dpad",
                     "processors": "",
-                    "interactions": "",
+                    "interactions": "Press(pressPoint=0.2)",
                     "initialStateCheck": true
                 },
                 {
