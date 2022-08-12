@@ -28,6 +28,7 @@ public class InvertPWUPController : MonoBehaviour
         if (collision.gameObject.CompareTag("InvrtPOW"))
         {
             player.defaultActionMap = "Inverted";
+            Debug.Log("inverted");
         }
     }
 }
