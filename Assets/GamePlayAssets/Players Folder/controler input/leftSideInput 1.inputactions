@@ -1,0 +1,102 @@
+{
+    "name": "leftSideInput 1",
+    "maps": [
+        {
+            "name": "Normal",
+            "id": "6a0d602c-839d-4fb0-8496-c03eb4b55820",
+            "actions": [
+                {
+                    "name": "jump",
+                    "type": "Value",
+                    "id": "d25a83ab-0615-46d8-8deb-f7b8adfa4c8b",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                },
+                {
+                    "name": "DashDown",
+                    "type": "Button",
+                    "id": "61a8d3e1-67d1-44b1-8946-c49a5a498a0f",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "893859ec-2f2d-489c-bb83-ed7073a85b4c",
+                    "path": "<Gamepad>/dpad/right",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "jump",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "d6bd001b-1109-4ba2-8c7b-48eec9c974d3",
+                    "path": "<Gamepad>/dpad/left",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "DashDown",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        },
+        {
+            "name": "inverted",
+            "id": "d1ffd256-b209-4690-8dc6-8c81a490e239",
+            "actions": [
+                {
+                    "name": "JumpInverted",
+                    "type": "Button",
+                    "id": "7627e96d-b429-4fde-8a89-245cef16ebb6",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "DashDownInverted",
+                    "type": "Button",
+                    "id": "ffb7dde5-8da3-40ea-a9d9-f8d08352be64",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "3a71ec88-519c-4eb7-80d5-f84431d8771b",
+                    "path": "<Gamepad>/dpad/left",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "JumpInverted",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "3d02c1df-73fe-4ad3-a147-2d334d11f6f9",
+                    "path": "<Gamepad>/dpad/right",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "DashDownInverted",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}

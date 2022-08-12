@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class Controls : MonoBehaviour
 {
@@ -13,23 +14,28 @@ public class Controls : MonoBehaviour
     float DashingPower = 30f;
     float DashingTime = 0.3f;
     float DashingCooldown = 1f;
+    public InputActionAsset normal;
+    public InputActionAsset reversed;
 
 
     void Start()
     {
+        
         Grounded = true;
         rb = GetComponent<Rigidbody2D>();   
+        
     }
 
     void Update()
     {
+       
         if(isDashing)
         {
             return;
         }
         transform.Translate(Vector2.right * Time.deltaTime * speed);
         
-        if(Input.GetKeyDown(KeyCode.Space) && Grounded)
+        if(Input.GetKeyDown(KeyCode.U) && Grounded)
         {
             //allow the player to jump once until theyre gronuded again
 
@@ -61,4 +67,25 @@ public class Controls : MonoBehaviour
         yield return new WaitForSeconds(DashingCooldown);
         canDash = true;
     }
+
+
+    public void JumpImplementation()
+    {
+        if(Grounded)
+        {
+            rb.AddForce(Vector2.up * jumpAmount, ForceMode2D.Impulse);
+            Grounded = false;
+        }
+       
+    }
+
+    public void DashDownImplementation()
+    {
+        if(canDash)
+        {
+            StartCoroutine(DashingDown());
+        }
+       
+    }
+
 }
