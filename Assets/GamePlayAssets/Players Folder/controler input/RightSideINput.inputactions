@@ -1,12 +1,12 @@
 {
-    "name": "RightSideINput",
+    "name": "RightSideInput",
     "maps": [
         {
             "name": "Normal",
             "id": "6a0d602c-839d-4fb0-8496-c03eb4b55820",
             "actions": [
                 {
-                    "name": "jump",
+                    "name": "Jump",
                     "type": "Button",
                     "id": "d25a83ab-0615-46d8-8deb-f7b8adfa4c8b",
                     "expectedControlType": "Button",
@@ -32,7 +32,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "jump",
+                    "action": "Jump",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
