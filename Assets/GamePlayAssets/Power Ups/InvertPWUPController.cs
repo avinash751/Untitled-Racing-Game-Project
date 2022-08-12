@@ -3,14 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class InvertPWUPController : MonoBehaviour
+public class InvertController : MonoBehaviour
 {
     PlayerInput playercontrol;
     bool controlinvert;
 
     void OnTriggerEnter2D(Collider2D collision)
     {
-        player = collision.gameObject.GetComponent<PlayerInput>();
+        playercontrol = collision.gameObject.GetComponent<PlayerInput>();
         if (collision.gameObject.CompareTag("Player"))
         {
             playercontrol.actions.FindActionMap("Inverted").Enable();
