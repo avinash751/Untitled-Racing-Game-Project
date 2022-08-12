@@ -6,6 +6,9 @@ TagManager:
   tags:
   - Ground
   - Spike
+  - InvrtPOW
+  - ContrlSwitch
+  - Player2
   layers:
   - Default
   - TransparentFX

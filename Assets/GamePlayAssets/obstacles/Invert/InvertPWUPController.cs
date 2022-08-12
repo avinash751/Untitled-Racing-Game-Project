@@ -5,29 +5,35 @@ using UnityEngine.InputSystem;
 
 public class InvertPWUPController : MonoBehaviour
 {
-    PlayerInput player;
-    public InputActionAsset Normal;
-    public InputActionAsset Inverted;
+    PlayerInput playercontrol;
+    bool controlinvert;
+    public float Time;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
+    //Andrew's Code
     void OnTriggerEnter2D(Collider2D collision)
     {
-        GetComponent<InputActionAsset>();
-
-        if (collision.gameObject.CompareTag("InvrtPOW"))
+        playercontrol = collision.gameObject.GetComponent<PlayerInput>();
+        if (collision.gameObject.CompareTag("Player"))
         {
-            player.defaultActionMap = "Inverted";
+            playercontrol.actions.FindActionMap("Inverted").Enable();
+            playercontrol.actions.FindActionMap("Normal").Disable();
+
+            Invoke(nameof(disableinvertcontrols), Time);
         }
+        else
+        {
+            playercontrol.actions.FindActionMap("Inverted").Disable();
+            playercontrol.actions.FindActionMap("Normal").Enable();
+        }
+
+
+    }
+    // humaid's code
+    void disableinvertcontrols()
+    {
+        playercontrol.actions.FindActionMap("Inverted").Disable();
+        playercontrol.actions.FindActionMap("Normal").Enable();
+
+        Debug.Log("it works");
     }
 }

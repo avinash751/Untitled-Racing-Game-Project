@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 493523448001073420}
   - component: {fileID: 493523448001073423}
   - component: {fileID: 493523448001073422}
-  - component: {fileID: 4273936959716549971}
   - component: {fileID: 493523448001073409}
   - component: {fileID: 493523448001073408}
   - component: {fileID: -405093380057160565}
@@ -111,55 +110,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 4
---- !u!114 &4273936959716549971
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 493523448001073411}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 20c9e825149b9d74493c59305d03f140, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  JumpAction:
-    m_Name: Jump
-    m_Type: 1
-    m_ExpectedControlType: Button
-    m_Id: 5ef45bb2-1b15-4a09-914e-1b8b49c32b00
-    m_Processors: 
-    m_Interactions: 
-    m_SingletonActionBindings:
-    - m_Name: 
-      m_Id: 0a2d3746-7962-4b5c-8eca-06a75cd8ccaa
-      m_Path: <Gamepad>/leftStick/right
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Jump
-      m_Flags: 0
-    m_Flags: 0
-  DashAction:
-    m_Name: Dash
-    m_Type: 1
-    m_ExpectedControlType: Button
-    m_Id: e13cac0b-a139-43c0-a982-94209080fbec
-    m_Processors: 
-    m_Interactions: 
-    m_SingletonActionBindings:
-    - m_Name: 
-      m_Id: d67da3ed-01d2-4d50-967d-07cf9b520d51
-      m_Path: <Gamepad>/leftStick/left
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Dash
-      m_Flags: 0
-    m_Flags: 0
-  Button1: LeftStick/Right
-  Button2: LeftStick/Left
-  PlayerControl: {fileID: 0}
 --- !u!70 &493523448001073409
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -188,8 +138,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3062b3062517407478a77a761ec24f3b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 1
-  jumpAmount: 9
+  speed: 8
+  jumpAmount: 12
   Grounded: 0
   normal: {fileID: -944628639613478452, guid: 7a1acdc01f482c1429f22f31d8b73101, type: 3}
   reversed: {fileID: -944628639613478452, guid: 7a1acdc01f482c1429f22f31d8b73101, type: 3}
@@ -205,7 +155,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 02e9cfb6b27c7dd4fb77b1eb6bf79504, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Repositioned: 0
+  Repositioned: 1
   ignoreObstacleCollision: 0
   ObstacleColliders: []
   DurationOfInvulnurability: 3
