@@ -7,7 +7,6 @@ public class GameStateMachine : MonoBehaviour
 {
     public GameState gamestate;
 
-
     public enum GameState
     {
         Start,
@@ -28,6 +27,9 @@ public class GameStateMachine : MonoBehaviour
 
     public void GameOver()
     {
+        Time.timeScale = 0;
         gamestate = GameState.Gameover;
     }
+
+
 }
