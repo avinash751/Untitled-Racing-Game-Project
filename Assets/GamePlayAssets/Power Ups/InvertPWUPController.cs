@@ -17,18 +17,22 @@ public class InvertPWUPController : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-    {
+    { 
         
     }
 
     void OnTriggerEnter2D(Collider2D collision)
     {
-        GetComponent<InputActionAsset>();
+        Debug.Log("inverted");
 
-        if (collision.gameObject.CompareTag("InvrtPOW"))
+        if (collision.gameObject.CompareTag("Player"))
         {
-            player.defaultActionMap = "Inverted";
-            Debug.Log("inverted");
+            player = collision.gameObject.GetComponent<PlayerInput>();
+            player.actions.FindActionMap("Normal").Disable();
+            player.actions.FindActionMap("Inverted").Enable();
+
+
+            // player.currentActionMap = 
         }
     }
 }
