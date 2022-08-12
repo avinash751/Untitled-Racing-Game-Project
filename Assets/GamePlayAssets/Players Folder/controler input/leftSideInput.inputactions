@@ -1,12 +1,12 @@
 {
-    "name": "leftSideInput 1",
+    "name": "leftSideInput",
     "maps": [
         {
             "name": "Normal",
             "id": "6a0d602c-839d-4fb0-8496-c03eb4b55820",
             "actions": [
                 {
-                    "name": "jump",
+                    "name": "Jump",
                     "type": "Value",
                     "id": "d25a83ab-0615-46d8-8deb-f7b8adfa4c8b",
                     "expectedControlType": "Dpad",
@@ -32,7 +32,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "jump",
+                    "action": "Jump",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -50,7 +50,7 @@
             ]
         },
         {
-            "name": "inverted",
+            "name": "Inverted",
             "id": "d1ffd256-b209-4690-8dc6-8c81a490e239",
             "actions": [
                 {

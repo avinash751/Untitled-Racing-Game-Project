@@ -6,7 +6,8 @@ using UnityEngine.InputSystem;
 public class InvertPWUPController : MonoBehaviour
 {
     PlayerInput player;
-   
+    public InputActionAsset Normal;
+    public InputActionAsset Inverted;
 
     // Start is called before the first frame update
     void Start()
@@ -22,9 +23,11 @@ public class InvertPWUPController : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D collision)
     {
+        GetComponent<InputActionAsset>();
+
         if (collision.gameObject.CompareTag("InvrtPOW"))
         {
-            
+            player.defaultActionMap = "Inverted";
         }
     }
 }

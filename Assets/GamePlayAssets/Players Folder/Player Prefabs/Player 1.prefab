@@ -191,8 +191,8 @@ MonoBehaviour:
   speed: 1
   jumpAmount: 9
   Grounded: 0
-  normal: {fileID: 0}
-  reversed: {fileID: 0}
+  normal: {fileID: -944628639613478452, guid: 7a1acdc01f482c1429f22f31d8b73101, type: 3}
+  reversed: {fileID: -944628639613478452, guid: 7a1acdc01f482c1429f22f31d8b73101, type: 3}
 --- !u!114 &-405093380057160565
 MonoBehaviour:
   m_ObjectHideFlags: 0
