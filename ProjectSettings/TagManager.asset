@@ -6,7 +6,6 @@ TagManager:
   tags:
   - Ground
   - Spike
-  - JumpableObstacle
   layers:
   - Default
   - TransparentFX

@@ -1,8 +1,7 @@
-
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.InputSystem;
 
 public class Controls : MonoBehaviour
 {
@@ -15,7 +14,8 @@ public class Controls : MonoBehaviour
     float DashingPower = 30f;
     float DashingTime = 0.3f;
     float DashingCooldown = 1f;
-   
+    public InputActionAsset normal;
+    public InputActionAsset reversed;
 
 
     void Start()
@@ -52,7 +52,7 @@ public class Controls : MonoBehaviour
     }
     private void OnCollisionEnter2D(Collision2D other)
     {
-        if (other.gameObject.CompareTag ("Ground") || other.gameObject.CompareTag("JumpableObstacle"))
+        if (other.gameObject.CompareTag ("Ground"))
         {
             Grounded = true;
         }
