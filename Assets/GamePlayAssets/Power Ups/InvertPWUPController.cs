@@ -28,8 +28,7 @@ public class InvertPWUPController : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             player = collision.gameObject.GetComponent<PlayerInput>();
-            player.actions.FindActionMap("Normal").Disable();
-            player.actions.FindActionMap("Inverted").Enable();
+           
 
 
             // player.currentActionMap = 
