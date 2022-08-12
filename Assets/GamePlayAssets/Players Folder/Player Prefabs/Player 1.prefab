@@ -138,8 +138,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3062b3062517407478a77a761ec24f3b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 1
-  jumpAmount: 9
+  speed: 8
+  jumpAmount: 12
   Grounded: 0
   normal: {fileID: -944628639613478452, guid: 7a1acdc01f482c1429f22f31d8b73101, type: 3}
   reversed: {fileID: -944628639613478452, guid: 7a1acdc01f482c1429f22f31d8b73101, type: 3}

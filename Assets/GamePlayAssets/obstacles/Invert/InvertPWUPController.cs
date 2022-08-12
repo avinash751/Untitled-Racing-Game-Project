@@ -7,7 +7,7 @@ public class InvertPWUPController : MonoBehaviour
 {
     PlayerInput playercontrol;
     bool controlinvert;
-    public float time;
+    public float Time;
 
     void OnTriggerEnter2D(Collider2D collision)
     {
@@ -18,7 +18,7 @@ public class InvertPWUPController : MonoBehaviour
             playercontrol.actions.FindActionMap("Normal").Disable();
             controlinvert = true;
 
-            Invoke(nameof(disableinvertcontrols), time);
+            Invoke(nameof(disableinvertcontrols), Time);
 
            
         

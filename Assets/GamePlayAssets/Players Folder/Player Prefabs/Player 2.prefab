@@ -15,7 +15,6 @@ GameObject:
   - component: {fileID: 4507245842764869882}
   - component: {fileID: 4507245842764869883}
   - component: {fileID: -6701535874981910141}
-  - component: {fileID: -1932371491197018163}
   m_Layer: 0
   m_Name: Player 2
   m_TagString: Player
@@ -139,8 +138,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3062b3062517407478a77a761ec24f3b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 10
-  jumpAmount: 9
+  speed: 8
+  jumpAmount: 12
   Grounded: 0
   normal: {fileID: -944628639613478452, guid: db3d5a4e912af234788aaaf838de42e0, type: 3}
   reversed: {fileID: -944628639613478452, guid: db3d5a4e912af234788aaaf838de42e0, type: 3}
@@ -254,52 +253,3 @@ MonoBehaviour:
   ignoreObstacleCollision: 0
   ObstacleColliders: []
   DurationOfInvulnurability: 3
---- !u!114 &-1932371491197018163
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4507245842764869884}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 20c9e825149b9d74493c59305d03f140, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  JumpAction:
-    m_Name: Jump
-    m_Type: 1
-    m_ExpectedControlType: Button
-    m_Id: c444ad4e-1a0d-4a7c-ace9-e080cd0d42ff
-    m_Processors: 
-    m_Interactions: 
-    m_SingletonActionBindings:
-    - m_Name: 
-      m_Id: 0abf9145-783a-4d0b-a5dd-4598ccf601bb
-      m_Path: <Gamepad>/buttonWest
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Jump
-      m_Flags: 0
-    m_Flags: 0
-  DashAction:
-    m_Name: Dash
-    m_Type: 1
-    m_ExpectedControlType: Button
-    m_Id: 5b0bace8-2612-403c-8511-d7b65abf021a
-    m_Processors: 
-    m_Interactions: 
-    m_SingletonActionBindings:
-    - m_Name: 
-      m_Id: 47684477-d3ee-4f2f-811b-d03ec7a5312a
-      m_Path: <Gamepad>/buttonEast
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Dash
-      m_Flags: 0
-    m_Flags: 0
-  Button1: 
-  Button2: 
-  PlayerControl: {fileID: 0}
