@@ -14,8 +14,7 @@ public class Controls : MonoBehaviour
     float DashingPower = 30f;
     float DashingTime = 0.3f;
     float DashingCooldown = 1f;
-    public InputActionAsset normal;
-    public InputActionAsset reversed;
+  
 
 
     void Start()
