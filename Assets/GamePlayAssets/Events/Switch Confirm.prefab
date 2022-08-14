@@ -71,3 +71,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 27f3d02b0987c91468473d989dd4da4f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  LeftSide: {fileID: -944628639613478452, guid: 7a1acdc01f482c1429f22f31d8b73101, type: 3}
+  RightSide: {fileID: -944628639613478452, guid: db3d5a4e912af234788aaaf838de42e0, type: 3}
+  AllPlayers: []
+  time: 5

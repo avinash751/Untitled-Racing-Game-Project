@@ -51,7 +51,7 @@ public class Controls : MonoBehaviour
     }
     private void OnCollisionEnter2D(Collision2D other)
     {
-        if (other.gameObject.CompareTag ("Ground"))
+        if (other.gameObject.CompareTag ("Ground") || other.gameObject.CompareTag("GroundObstacle"))
         {
             Grounded = true;
         }
