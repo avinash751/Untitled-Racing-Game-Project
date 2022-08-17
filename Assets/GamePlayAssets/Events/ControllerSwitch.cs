@@ -6,23 +6,34 @@ using UnityEngine.InputSystem;
 public class ControllerSwitch : MonoBehaviour
 {
     PlayerInput controlswitch;
+    [SerializeField] InputActionAsset LeftSide;
+    [SerializeField] InputActionAsset RightSide;
+    [SerializeField] Controls[] AllPlayers;
+    [SerializeField] float time;
 
-    //Andrew's Code
+
+    private void Awake()
+    {
+        AllPlayers = FindObjectsOfType<Controls>();
+    }
+
+    //Andrew & Avinash Code
     void OnTriggerEnter2D(Collider2D collision)
     {
         
         if (collision.gameObject.CompareTag("Player"))
         {
             controlswitch = collision.gameObject.GetComponent<PlayerInput>();
-            controlswitch.actions.FindActionMap("Left Side").Disable();
-            controlswitch.actions.FindActionMap("Right Side").Enable();
+            AllPlayers[0].GetComponent<PlayerInput>().actions = RightSide;
+            AllPlayers[1].GetComponent<PlayerInput>().actions = LeftSide;
+            Invoke(nameof(SwitchBackToNormalControls), time);
+            Debug.Log("switch side");
         }
-
-        if (collision.gameObject.CompareTag("Player2"))
-        {
-            controlswitch = collision.gameObject.GetComponent<PlayerInput>();
-            controlswitch.actions.FindActionMap("Left Side").Enable();
-            controlswitch.actions.FindActionMap("Right Side").Disable();
-        }
+    }
+    void SwitchBackToNormalControls()
+    {
+        AllPlayers[0].GetComponent<PlayerInput>().actions = LeftSide;
+        AllPlayers[1].GetComponent<PlayerInput>().actions = RightSide;
+        Debug.Log("switched back");
     }
 }

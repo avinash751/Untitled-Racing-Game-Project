@@ -9,6 +9,8 @@ TagManager:
   - InvrtPOW
   - ContrlSwitch
   - Player2
+  - Obstacle
+  - GroundObstacle
   layers:
   - Default
   - TransparentFX

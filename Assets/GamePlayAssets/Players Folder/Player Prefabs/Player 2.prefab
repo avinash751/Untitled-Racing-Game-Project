@@ -141,8 +141,6 @@ MonoBehaviour:
   speed: 8
   jumpAmount: 12
   Grounded: 0
-  normal: {fileID: -944628639613478452, guid: db3d5a4e912af234788aaaf838de42e0, type: 3}
-  reversed: {fileID: -944628639613478452, guid: db3d5a4e912af234788aaaf838de42e0, type: 3}
 --- !u!114 &4507245842764869883
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -160,34 +158,10 @@ MonoBehaviour:
   m_UIInputModule: {fileID: 0}
   m_DeviceLostEvent:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 4507245842764869882}
-        m_TargetAssemblyTypeName: Controls, Assembly-CSharp
-        m_MethodName: JumpImplementation
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   m_DeviceRegainedEvent:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 4507245842764869882}
-        m_TargetAssemblyTypeName: Controls, Assembly-CSharp
-        m_MethodName: DashDownImplementation
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   m_ControlsChangedEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -225,13 +199,45 @@ MonoBehaviour:
     m_ActionId: 61a8d3e1-67d1-44b1-8946-c49a5a498a0f
     m_ActionName: Normal/DashDown[/XInputControllerWindows/buttonEast]
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 4507245842764869882}
+        m_TargetAssemblyTypeName: Controls, Assembly-CSharp
+        m_MethodName: JumpImplementation
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: 7627e96d-b429-4fde-8a89-245cef16ebb6
     m_ActionName: Inverted/JumpInverted[/XInputControllerWindows/buttonEast]
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 4507245842764869882}
+        m_TargetAssemblyTypeName: Controls, Assembly-CSharp
+        m_MethodName: DashDownImplementation
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: ffb7dde5-8da3-40ea-a9d9-f8d08352be64
     m_ActionName: Inverted/DashDownInverted[/XInputControllerWindows/buttonWest]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: b699bd41-adaa-47a4-aba0-fbe474400391
+    m_ActionName: Left Side/Jump[/XInputControllerWindows/leftStick/right]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: b4c81470-6995-47a3-9e22-20ca910d402c
+    m_ActionName: Left Side/Dash Down[/XInputControllerWindows/leftStick/left]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Normal
@@ -252,4 +258,4 @@ MonoBehaviour:
   Repositioned: 1
   ignoreObstacleCollision: 0
   ObstacleColliders: []
-  DurationOfInvulnurability: 3
+  DurationOfInvulnurability: 2

@@ -11,11 +11,10 @@ public class Controls : MonoBehaviour
     public bool Grounded=true;
     bool canDash = true;
     bool isDashing;
-    float DashingPower = 30f;
-    float DashingTime = 0.3f;
+    float DashingPower = 25f;
+    float DashingTime = 0.2f;
     float DashingCooldown = 1f;
-    public InputActionAsset normal;
-    public InputActionAsset reversed;
+  
 
 
     void Start()
@@ -52,7 +51,7 @@ public class Controls : MonoBehaviour
     }
     private void OnCollisionEnter2D(Collision2D other)
     {
-        if (other.gameObject.CompareTag ("Ground"))
+        if (other.gameObject.CompareTag ("Ground") || other.gameObject.CompareTag("GroundObstacle"))
         {
             Grounded = true;
         }
