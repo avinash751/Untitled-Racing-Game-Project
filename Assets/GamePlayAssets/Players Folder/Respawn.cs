@@ -57,7 +57,7 @@ public class Respawn : MonoBehaviour
     {
         if(ignoreObstacleCollision)
         {
-            if(collision.gameObject.tag == "Spike")
+            if(collision.gameObject.tag == "Spike" || collision.gameObject.tag == "GroundObstacle")
             {
                 ObstacleColliders.Add(collision.gameObject.GetComponent<Collider2D>());
             }

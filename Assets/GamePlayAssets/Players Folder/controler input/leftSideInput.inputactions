@@ -140,6 +140,54 @@
                     "isPartOfComposite": true
                 }
             ]
+        },
+        {
+            "name": "Right Side",
+            "id": "857e8a95-ee3e-4887-af9f-c44830617c48",
+            "actions": [
+                {
+                    "name": "Jump",
+                    "type": "Button",
+                    "id": "faa807d1-84f4-4859-948a-3951e88ac8e7",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Dash Down",
+                    "type": "Button",
+                    "id": "aee569a8-0e7e-4836-9679-6e7bf6186e62",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "fa5b8a57-c5d4-4348-a911-b3e24516ac21",
+                    "path": "<Gamepad>/buttonWest",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Jump",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "fffdc6d1-a073-481b-bdc2-68bd9bd0b5cd",
+                    "path": "<Gamepad>/buttonEast",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Dash Down",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
         }
     ],
     "controlSchemes": []

@@ -5,18 +5,8 @@ using UnityEngine;
 public class SpikeDeathController : MonoBehaviour
 {
     public Respawn playerrespawn;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
+    //Andrew's Code
    void OnCollisionEnter2D(Collision2D collision)
     {
         playerrespawn = collision.gameObject.GetComponent<Respawn>();
