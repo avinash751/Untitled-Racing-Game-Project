@@ -9,6 +9,7 @@ public class Respawn : MonoBehaviour
     [SerializeField] List<Collider2D> ObstacleColliders = new List<Collider2D>();
     [SerializeField] float DurationOfInvulnurability;
     bool runOnce;
+    [SerializeField] float ThresholdForDefaultReposition;
 
     private void OnDisable()
     {
@@ -37,7 +38,15 @@ public class Respawn : MonoBehaviour
     }
     void RepsoitionPlayer()
     {
-        gameObject.transform.position = new Vector2(Camera.main.transform.position.x, -3.52f);
+        if(Camera.main.transform.position.x < ThresholdForDefaultReposition)
+        {
+            gameObject.transform.position = new Vector2(Camera.main.transform.position.x, -3.52f);
+        }
+        else
+        {
+            gameObject.transform.position = new Vector2(Camera.main.transform.position.x -6, -3.52f);
+        }
+       
     }
 
     IEnumerator ReSetInvulnerability()

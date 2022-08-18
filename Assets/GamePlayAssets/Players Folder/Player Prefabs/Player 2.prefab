@@ -258,4 +258,5 @@ MonoBehaviour:
   Repositioned: 1
   ignoreObstacleCollision: 0
   ObstacleColliders: []
-  DurationOfInvulnurability: 2
+  DurationOfInvulnurability: 3
+  ThresholdForDefaultReposition: 208.5

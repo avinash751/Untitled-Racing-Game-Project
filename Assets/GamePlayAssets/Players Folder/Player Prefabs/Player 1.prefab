@@ -141,8 +141,6 @@ MonoBehaviour:
   speed: 8
   jumpAmount: 12
   Grounded: 0
-  normal: {fileID: -944628639613478452, guid: 7a1acdc01f482c1429f22f31d8b73101, type: 3}
-  reversed: {fileID: -944628639613478452, guid: 7a1acdc01f482c1429f22f31d8b73101, type: 3}
 --- !u!114 &-405093380057160565
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -159,6 +157,7 @@ MonoBehaviour:
   ignoreObstacleCollision: 0
   ObstacleColliders: []
   DurationOfInvulnurability: 3
+  ThresholdForDefaultReposition: 208.5
 --- !u!114 &3503977186915707956
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -248,6 +247,14 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: ffb7dde5-8da3-40ea-a9d9-f8d08352be64
     m_ActionName: inverted/DashDownInverted[/XInputControllerWindows/dpad/right]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: faa807d1-84f4-4859-948a-3951e88ac8e7
+    m_ActionName: Right Side/Jump[/XInputControllerWindows/buttonWest]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: aee569a8-0e7e-4836-9679-6e7bf6186e62
+    m_ActionName: Right Side/Dash Down[/XInputControllerWindows/buttonEast]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Normal
