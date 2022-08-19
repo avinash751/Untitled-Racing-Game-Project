@@ -4335,6 +4335,7 @@ GameObject:
   - component: {fileID: 1637940656}
   - component: {fileID: 1637940657}
   - component: {fileID: 1637940658}
+  - component: {fileID: 1637940659}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -4467,7 +4468,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -10.18, y: -0.16}
+  m_Offset: {x: -9.4, y: -0.16}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -4492,6 +4493,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8153af9a239931649aab3ec45180e16d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1637940659
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1637940651}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d3166aa480db05b47bedde77bfce7078, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollsionTag: Player
+  ParticleSystem: {fileID: 8218331739060808907, guid: 451bb90eeabe1a443895d9f9d2022d53, type: 3}
+  ParticleDestroyTimer: 3
+  SpawnPositionOffset: {x: 2.5, y: 0.6, z: 0}
+  DoExtraThingsOnCollision:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!4 &1676899395 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7573475538733363324, guid: 34b6065825bab0c4192c95d33f6b04ac, type: 3}
