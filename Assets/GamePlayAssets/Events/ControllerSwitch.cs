@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.Events;
 
 public class ControllerSwitch : MonoBehaviour
 {
@@ -10,6 +11,8 @@ public class ControllerSwitch : MonoBehaviour
     [SerializeField] InputActionAsset RightSide;
     [SerializeField] Controls[] AllPlayers;
     [SerializeField] float time;
+    [Header("Do more on collsion, if needed")]
+    public UnityEvent PlayEventOnCollsion;
 
 
     private void Awake()
@@ -27,6 +30,7 @@ public class ControllerSwitch : MonoBehaviour
             AllPlayers[0].GetComponent<PlayerInput>().actions = RightSide;
             AllPlayers[1].GetComponent<PlayerInput>().actions = LeftSide;
             Invoke(nameof(SwitchBackToNormalControls), time);
+            PlayEventOnCollsion.Invoke();
             Debug.Log("switch side");
         }
     }
