@@ -337,7 +337,7 @@ PrefabInstance:
       objectReference: {fileID: 8300000, guid: 764cce1ac3653914f8390a2333f2fa59, type: 3}
     - target: {fileID: 2529641887993965316, guid: 8b65bef9d83ad0747b06b66c39efa103, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3503977186915707956, guid: 8b65bef9d83ad0747b06b66c39efa103, type: 3}
       propertyPath: m_ActionEvents.Array.data[1].m_PersistentCalls.m_Calls.Array.size
@@ -1793,7 +1793,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 87307735}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 593574732}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d0a388a38c5d3834c8c4a04753e9253e, type: 3}
   m_Name: 
@@ -4798,7 +4798,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 689217116703702591, guid: 8824c270c9ef31c4f864662d1b144b76, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4507245842764869862, guid: 8824c270c9ef31c4f864662d1b144b76, type: 3}
       propertyPath: m_RootOrder
