@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: -405093380057160565}
   - component: {fileID: 3503977186915707956}
   - component: {fileID: 795184587734051134}
+  - component: {fileID: 2529641887993965316}
   m_Layer: 0
   m_Name: Player 1
   m_TagString: Player
@@ -80,7 +81,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0, g: 0.10980368, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -202,9 +203,9 @@ MonoBehaviour:
     m_ActionName: Normal/jump[/XInputControllerWindows/dpad/right]
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 493523448001073408}
-        m_TargetAssemblyTypeName: Controls, Assembly-CSharp
-        m_MethodName: DashDownImplementation
+      - m_Target: {fileID: 2529641887993965316}
+        m_TargetAssemblyTypeName: PlayASound, Assembly-CSharp
+        m_MethodName: PlaySound
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -234,9 +235,9 @@ MonoBehaviour:
     m_ActionName: inverted/JumpInverted[/XInputControllerWindows/dpad/left]
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 493523448001073408}
-        m_TargetAssemblyTypeName: Controls, Assembly-CSharp
-        m_MethodName: DashDownImplementation
+      - m_Target: {fileID: 2529641887993965316}
+        m_TargetAssemblyTypeName: PlayASound, Assembly-CSharp
+        m_MethodName: PlaySound
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -280,3 +281,20 @@ MonoBehaviour:
   DoExtraThingsOnCollision:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &2529641887993965316
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 493523448001073411}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0a388a38c5d3834c8c4a04753e9253e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AllAudioSources: []
+  AmmountOfAudioSourcessRequired: 3
+  AudioFile: {fileID: 8300000, guid: 764cce1ac3653914f8390a2333f2fa59, type: 3}
+  AudioVolume: 0.5
+  AudioPitch: 1.5

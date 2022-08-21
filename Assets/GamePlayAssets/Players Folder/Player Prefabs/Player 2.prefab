@@ -17,6 +17,7 @@ GameObject:
   - component: {fileID: 3501930600344821182}
   - component: {fileID: -6701535874981910141}
   - component: {fileID: -2360924686395463542}
+  - component: {fileID: 689217116703702591}
   m_Layer: 0
   m_Name: Player 2
   m_TagString: Player
@@ -185,19 +186,7 @@ MonoBehaviour:
     m_ActionId: d25a83ab-0615-46d8-8deb-f7b8adfa4c8b
     m_ActionName: Normal/jump[/XInputControllerWindows/buttonWest]
   - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 4507245842764869882}
-        m_TargetAssemblyTypeName: Controls, Assembly-CSharp
-        m_MethodName: DashDownImplementation
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
     m_ActionId: 61a8d3e1-67d1-44b1-8946-c49a5a498a0f
     m_ActionName: Normal/DashDown[/XInputControllerWindows/buttonEast]
   - m_PersistentCalls:
@@ -217,19 +206,7 @@ MonoBehaviour:
     m_ActionId: 7627e96d-b429-4fde-8a89-245cef16ebb6
     m_ActionName: Inverted/JumpInverted[/XInputControllerWindows/buttonEast]
   - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 4507245842764869882}
-        m_TargetAssemblyTypeName: Controls, Assembly-CSharp
-        m_MethodName: DashDownImplementation
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
     m_ActionId: ffb7dde5-8da3-40ea-a9d9-f8d08352be64
     m_ActionName: Inverted/DashDownInverted[/XInputControllerWindows/buttonWest]
   - m_PersistentCalls:
@@ -293,3 +270,23 @@ MonoBehaviour:
   DoExtraThingsOnCollision:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &689217116703702591
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4507245842764869884}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0a388a38c5d3834c8c4a04753e9253e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AllAudioSources: []
+  AmmountOfAudioSourcessRequired: 3
+  AudioFile: {fileID: 8300000, guid: 764cce1ac3653914f8390a2333f2fa59, type: 3}
+  AudioVolume: 0.5
+  AudioPitch: 0.93
+  RandomizePitch: 0
+  minPitchRange: 0
+  maxPitchRange: 0
