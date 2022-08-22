@@ -6,20 +6,38 @@ public class changeColorOnHit : MonoBehaviour
 
 {
     SpriteRenderer coloreto;
+
+    public bool Startlurping;
+    
     void Start()
     {
         coloreto = GetComponent<SpriteRenderer>();
     }
 
-    void OnCollisionEnter2D(Collision2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        coloreto.color = new Color(2, 0, 0);
+        if (collision.gameObject.CompareTag("InvrtPOW"))
+        {
+
+            coloreto.color = new Color(3, 0, 2);
+
+
+            Startlurping = true;
+
+            
+            
+        }
     }
 
-    void Update()
-    {
-        coloreto.color = Color.Lerp(coloreto.color, Color.red, Time.deltaTime / 2.5f);
+  
 
+    void Update()
+    {   if (Startlurping)
+        {
+            coloreto.color = Color.Lerp(coloreto.color, Color.black, Time.deltaTime / 2f);
+        }
         
+            
+
     }
 }
