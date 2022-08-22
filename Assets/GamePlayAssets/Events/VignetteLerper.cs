@@ -19,8 +19,6 @@ public class VignetteLerper : MonoBehaviour
     {
         PostProcess.profile.TryGet(out P_Vignette);
     }
-
-    // Update is called once per frame
     void Update()
     {
         LerpVignnette();
@@ -49,10 +47,7 @@ public class VignetteLerper : MonoBehaviour
         {
             SetElapsedTimeTOZero();
         }
-       
-       
     }
-
     public void EnableLerping(bool enable)
     {
         StartLerping = enable;

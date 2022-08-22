@@ -13,35 +13,20 @@ public class PlayASound : MonoBehaviour
     [SerializeField] AudioClip AudioFile;
     [Range(0, 1)][SerializeField] float AudioVolume;
     [Range(0, 3)][SerializeField] float AudioPitch;
-    
-   
-
-    
     // Start is called before the first frame update
     void Start()
     {
-     
         CreateAllAudioSources();
         InitailizeAllAudioSourceValues();
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     void CreateAllAudioSources()
     {
         AllAudioSources = new AudioSource[AmmountOfAudioSourcessRequired];
         for (int i = 0; i < AmmountOfAudioSourcessRequired; i++)
         {
-
             AllAudioSources[i] = gameObject.AddComponent<AudioSource>();
-            
         }
     }
-
     void InitailizeAllAudioSourceValues()
     {
         foreach(AudioSource a in AllAudioSources)
@@ -53,7 +38,6 @@ public class PlayASound : MonoBehaviour
             Debug.Log(a);
         }
     }
-
     public void PlaySound()
     {
         if (index == AmmountOfAudioSourcessRequired)
@@ -66,7 +50,6 @@ public class PlayASound : MonoBehaviour
             index++;
             Debug.Log("sound played");
         }
-        
     }
 
    

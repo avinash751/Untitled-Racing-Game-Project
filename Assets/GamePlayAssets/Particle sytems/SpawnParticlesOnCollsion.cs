@@ -9,6 +9,7 @@ public class SpawnParticlesOnCollsion : MonoBehaviour
     [SerializeField] GameObject ParticleSystem;
     [SerializeField] float ParticleDestroyTimer;
     [SerializeField] Vector3 SpawnPositionOffset;
+    [SerializeField] bool SpawnFromAnotherEvent;
 
     [Header("DO more after collsion,if needed")]
     [SerializeField] UnityEvent DoExtraThingsOnCollision;
@@ -16,7 +17,7 @@ public class SpawnParticlesOnCollsion : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if(collision.gameObject.tag == CollsionTag)
+        if(collision.gameObject.tag == CollsionTag &&!SpawnFromAnotherEvent)
         {
             SpawnParticleSystemThenDestroy(collision.transform);
             DoExtraThingsOnCollision.Invoke();
@@ -25,7 +26,7 @@ public class SpawnParticlesOnCollsion : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == CollsionTag)
+        if (collision.gameObject.tag == CollsionTag && !SpawnFromAnotherEvent)
         {
             SpawnParticleSystemThenDestroy(collision.transform);
             DoExtraThingsOnCollision.Invoke();

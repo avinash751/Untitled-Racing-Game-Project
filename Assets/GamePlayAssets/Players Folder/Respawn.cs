@@ -15,6 +15,7 @@ public class Respawn : MonoBehaviour
     {
         if(Repositioned)
         {
+            GetComponent<ColorBlinker>().EnableColorBlinking(true);
             Repositioned = false;
             Invoke(nameof(ReactivatePlayer), 1.5f);
         }
@@ -25,6 +26,7 @@ public class Respawn : MonoBehaviour
     {
         if(!Repositioned)
         {
+           
             RepsoitionPlayer();
             StartCoroutine(ReSetInvulnerability());
             Repositioned=true;
