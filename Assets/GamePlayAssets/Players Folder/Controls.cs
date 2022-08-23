@@ -15,8 +15,6 @@ public class Controls : MonoBehaviour
     float DashingTime = 0.2f;
     float DashingCooldown = 1f;
 
-
-
     void Start()
     {
         
@@ -51,7 +49,7 @@ public class Controls : MonoBehaviour
     }
     private void OnCollisionEnter2D(Collision2D other)
     {
-        if (other.gameObject.CompareTag ("Ground"))
+        if (other.gameObject.CompareTag ("Ground") || other.gameObject.CompareTag("GroundObstacle"))
         {
             Grounded = true;
         }
@@ -72,6 +70,7 @@ public class Controls : MonoBehaviour
     {
         if(Grounded)
         {
+          
             rb.AddForce(Vector2.up * jumpAmount, ForceMode2D.Impulse);
             Grounded = false;
         }
@@ -82,6 +81,7 @@ public class Controls : MonoBehaviour
     {
         if(canDash)
         {
+             GetComponent<PlayASound>().PlaySound();
             StartCoroutine(DashingDown());
         }
        

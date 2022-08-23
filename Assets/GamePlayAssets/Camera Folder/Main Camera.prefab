@@ -15,7 +15,8 @@ GameObject:
   - component: {fileID: 3733639047573033046}
   - component: {fileID: 3733639047573033047}
   - component: {fileID: 3129136981857666597}
-  m_Layer: 0
+  - component: {fileID: 3823701919083608719}
+  m_Layer: 6
   m_Name: Main Camera
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
@@ -30,7 +31,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3733639047573033037}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -10}
+  m_LocalPosition: {x: -4, y: 0, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -111,7 +112,7 @@ MonoBehaviour:
     m_Bits: 1
   m_VolumeTrigger: {fileID: 0}
   m_VolumeFrameworkUpdateModeOption: 2
-  m_RenderPostProcessing: 0
+  m_RenderPostProcessing: 1
   m_Antialiasing: 0
   m_AntialiasingQuality: 2
   m_StopNaN: 0
@@ -133,7 +134,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a4def500337645148a629731a270dae1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 10
+  speed: 8
 --- !u!61 &3733639047573033047
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -147,7 +148,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -10.18, y: -0.16}
+  m_Offset: {x: -9.4, y: -0.16}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -172,3 +173,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8153af9a239931649aab3ec45180e16d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &3823701919083608719
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3733639047573033037}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d3166aa480db05b47bedde77bfce7078, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollsionTag: Player
+  ParticleSystem: {fileID: 8218331739060808907, guid: 451bb90eeabe1a443895d9f9d2022d53, type: 3}
+  ParticleDestroyTimer: 3
+  SpawnPositionOffset: {x: 2.5, y: 0.6, z: 0}
+  DoExtraThingsOnCollision:
+    m_PersistentCalls:
+      m_Calls: []

@@ -1,0 +1,194 @@
+{
+    "name": "leftSideInput",
+    "maps": [
+        {
+            "name": "Normal",
+            "id": "6a0d602c-839d-4fb0-8496-c03eb4b55820",
+            "actions": [
+                {
+                    "name": "Jump",
+                    "type": "Value",
+                    "id": "d25a83ab-0615-46d8-8deb-f7b8adfa4c8b",
+                    "expectedControlType": "Dpad",
+                    "processors": "",
+                    "interactions": "Press",
+                    "initialStateCheck": true
+                },
+                {
+                    "name": "DashDown",
+                    "type": "Value",
+                    "id": "61a8d3e1-67d1-44b1-8946-c49a5a498a0f",
+                    "expectedControlType": "Dpad",
+                    "processors": "",
+                    "interactions": "Press",
+                    "initialStateCheck": true
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "2D Vector",
+                    "id": "f510407a-a637-4bb2-9b9a-68368b6311c2",
+                    "path": "2DVector",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Jump",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "right",
+                    "id": "6382835b-2394-42c0-98bc-7d55b9b14f2a",
+                    "path": "<Gamepad>/dpad/right",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Jump",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "2D Vector",
+                    "id": "bcf98383-1fba-407b-be1a-4960814833a0",
+                    "path": "2DVector",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "DashDown",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "left",
+                    "id": "44fe7c20-fc84-487a-a2b8-8c1e89d261c2",
+                    "path": "<Gamepad>/dpad/left",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "DashDown",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                }
+            ]
+        },
+        {
+            "name": "Inverted",
+            "id": "d1ffd256-b209-4690-8dc6-8c81a490e239",
+            "actions": [
+                {
+                    "name": "JumpInverted",
+                    "type": "Value",
+                    "id": "7627e96d-b429-4fde-8a89-245cef16ebb6",
+                    "expectedControlType": "Dpad",
+                    "processors": "",
+                    "interactions": "Press",
+                    "initialStateCheck": true
+                },
+                {
+                    "name": "DashDownInverted",
+                    "type": "Value",
+                    "id": "ffb7dde5-8da3-40ea-a9d9-f8d08352be64",
+                    "expectedControlType": "Dpad",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "2D Vector",
+                    "id": "323087a0-42a1-44d2-911f-984e79991276",
+                    "path": "2DVector",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "JumpInverted",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "left",
+                    "id": "69d0aefc-c068-4265-9b9f-0f7ae61c584a",
+                    "path": "<Gamepad>/dpad/left",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "JumpInverted",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "2D Vector",
+                    "id": "ad7f0b55-9b15-4e76-9f1a-7cffe03eea76",
+                    "path": "2DVector",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "DashDownInverted",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "right",
+                    "id": "1943c00c-d33f-45a9-9f54-7e3409f8f0c4",
+                    "path": "<Gamepad>/dpad/right",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "DashDownInverted",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                }
+            ]
+        },
+        {
+            "name": "Right Side",
+            "id": "857e8a95-ee3e-4887-af9f-c44830617c48",
+            "actions": [
+                {
+                    "name": "Jump",
+                    "type": "Button",
+                    "id": "faa807d1-84f4-4859-948a-3951e88ac8e7",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "Press",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Dash Down",
+                    "type": "Button",
+                    "id": "aee569a8-0e7e-4836-9679-6e7bf6186e62",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "fa5b8a57-c5d4-4348-a911-b3e24516ac21",
+                    "path": "<Gamepad>/buttonWest",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Jump",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "fffdc6d1-a073-481b-bdc2-68bd9bd0b5cd",
+                    "path": "<Gamepad>/buttonEast",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Dash Down",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}

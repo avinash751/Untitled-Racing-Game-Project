@@ -11,11 +11,13 @@ GameObject:
   - component: {fileID: 493523448001073420}
   - component: {fileID: 493523448001073423}
   - component: {fileID: 493523448001073422}
-  - component: {fileID: 4273936959716549971}
   - component: {fileID: 493523448001073409}
   - component: {fileID: 493523448001073408}
   - component: {fileID: -405093380057160565}
   - component: {fileID: 3503977186915707956}
+  - component: {fileID: 795184587734051134}
+  - component: {fileID: 2529641887993965316}
+  - component: {fileID: 2099929597794349963}
   m_Layer: 0
   m_Name: Player 1
   m_TagString: Player
@@ -80,7 +82,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0, g: 0.10980368, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -111,55 +113,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 4
---- !u!114 &4273936959716549971
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 493523448001073411}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 20c9e825149b9d74493c59305d03f140, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  JumpAction:
-    m_Name: Jump
-    m_Type: 1
-    m_ExpectedControlType: Button
-    m_Id: 5ef45bb2-1b15-4a09-914e-1b8b49c32b00
-    m_Processors: 
-    m_Interactions: 
-    m_SingletonActionBindings:
-    - m_Name: 
-      m_Id: 0a2d3746-7962-4b5c-8eca-06a75cd8ccaa
-      m_Path: <Gamepad>/leftStick/right
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Jump
-      m_Flags: 0
-    m_Flags: 0
-  DashAction:
-    m_Name: Dash
-    m_Type: 1
-    m_ExpectedControlType: Button
-    m_Id: e13cac0b-a139-43c0-a982-94209080fbec
-    m_Processors: 
-    m_Interactions: 
-    m_SingletonActionBindings:
-    - m_Name: 
-      m_Id: d67da3ed-01d2-4d50-967d-07cf9b520d51
-      m_Path: <Gamepad>/leftStick/left
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Dash
-      m_Flags: 0
-    m_Flags: 0
-  Button1: LeftStick/Right
-  Button2: LeftStick/Left
-  PlayerControl: {fileID: 0}
 --- !u!70 &493523448001073409
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -188,11 +141,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3062b3062517407478a77a761ec24f3b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 1
-  jumpAmount: 9
+  speed: 8
+  jumpAmount: 12
   Grounded: 0
-  normal: {fileID: 0}
-  reversed: {fileID: 0}
 --- !u!114 &-405093380057160565
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -205,10 +156,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 02e9cfb6b27c7dd4fb77b1eb6bf79504, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Repositioned: 0
+  Repositioned: 1
   ignoreObstacleCollision: 0
   ObstacleColliders: []
   DurationOfInvulnurability: 3
+  ThresholdForDefaultReposition: 208.5
 --- !u!114 &3503977186915707956
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -252,9 +204,9 @@ MonoBehaviour:
     m_ActionName: Normal/jump[/XInputControllerWindows/dpad/right]
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 493523448001073408}
-        m_TargetAssemblyTypeName: Controls, Assembly-CSharp
-        m_MethodName: DashDownImplementation
+      - m_Target: {fileID: 2529641887993965316}
+        m_TargetAssemblyTypeName: PlayASound, Assembly-CSharp
+        m_MethodName: PlaySound
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -284,9 +236,9 @@ MonoBehaviour:
     m_ActionName: inverted/JumpInverted[/XInputControllerWindows/dpad/left]
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 493523448001073408}
-        m_TargetAssemblyTypeName: Controls, Assembly-CSharp
-        m_MethodName: DashDownImplementation
+      - m_Target: {fileID: 2529641887993965316}
+        m_TargetAssemblyTypeName: PlayASound, Assembly-CSharp
+        m_MethodName: PlaySound
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -298,8 +250,73 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: ffb7dde5-8da3-40ea-a9d9-f8d08352be64
     m_ActionName: inverted/DashDownInverted[/XInputControllerWindows/dpad/right]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: faa807d1-84f4-4859-948a-3951e88ac8e7
+    m_ActionName: Right Side/Jump[/XInputControllerWindows/buttonWest]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: aee569a8-0e7e-4836-9679-6e7bf6186e62
+    m_ActionName: Right Side/Dash Down[/XInputControllerWindows/buttonEast]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Normal
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
+--- !u!114 &795184587734051134
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 493523448001073411}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d3166aa480db05b47bedde77bfce7078, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollsionTag: Spike
+  ParticleSystem: {fileID: 8218331739060808907, guid: 451bb90eeabe1a443895d9f9d2022d53, type: 3}
+  ParticleDestroyTimer: 2.5
+  SpawnPositionOffset: {x: 0, y: 0, z: 0}
+  SpawnFromAnotherEvent: 0
+  DoExtraThingsOnCollision:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &2529641887993965316
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 493523448001073411}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0a388a38c5d3834c8c4a04753e9253e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AllAudioSources: []
+  AmmountOfAudioSourcessRequired: 3
+  AudioFile: {fileID: 8300000, guid: 764cce1ac3653914f8390a2333f2fa59, type: 3}
+  AudioVolume: 0.5
+  AudioPitch: 1.5
+--- !u!114 &2099929597794349963
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 493523448001073411}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b60c51ec019d076498fadde91b84664f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TimeElapsed: 0
+  StartBlinking: 0
+  SpriteToBlink: {fileID: 0}
+  originalColor: {r: 0, g: 0, b: 0, a: 0}
+  ColorToBlinkTo: {r: 0.70514417, g: 0.738446, b: 0.8962264, a: 0}
+  Duration: 4.5
+  Frequency: 25
+  Amplitude: 0.8
