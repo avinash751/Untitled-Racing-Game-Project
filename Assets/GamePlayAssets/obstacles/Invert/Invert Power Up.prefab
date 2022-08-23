@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 7573475538733363323}
   - component: {fileID: 7573475538733363325}
   - component: {fileID: 6724038661957606243}
+  - component: {fileID: -8091977409852731130}
   m_Layer: 0
   m_Name: Invert Power Up
   m_TagString: InvrtPOW
@@ -125,3 +126,34 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Time: 4
+--- !u!114 &-8091977409852731130
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7573475538733363321}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d3166aa480db05b47bedde77bfce7078, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollsionTag: Player
+  ParticleSystem: {fileID: 2424434933820952305, guid: 7349fd7382b3baa4daaf07f4f1f86a66, type: 3}
+  ParticleDestroyTimer: 1.5
+  SpawnPositionOffset: {x: 0, y: 0.5, z: 0}
+  DoExtraThingsOnCollision:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 7573475538733363321}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2

@@ -10,7 +10,7 @@ public class InvertPWUPController : MonoBehaviour
     public float Time;
 
     //Andrew's Code
-    void OnTriggerEnter2D(Collider2D collision)
+    private void OnCollisionEnter2D(Collision2D collision)
     {
         playercontrol = collision.gameObject.GetComponent<PlayerInput>();
         if (collision.gameObject.CompareTag("Player"))
@@ -36,4 +36,7 @@ public class InvertPWUPController : MonoBehaviour
 
         Debug.Log("it works");
     }
+
+   
+    
 }

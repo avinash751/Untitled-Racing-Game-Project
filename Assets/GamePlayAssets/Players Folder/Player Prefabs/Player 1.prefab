@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 493523448001073408}
   - component: {fileID: -405093380057160565}
   - component: {fileID: 3503977186915707956}
+  - component: {fileID: 795184587734051134}
   m_Layer: 0
   m_Name: Player 1
   m_TagString: Player
@@ -141,8 +142,6 @@ MonoBehaviour:
   speed: 8
   jumpAmount: 12
   Grounded: 0
-  normal: {fileID: -944628639613478452, guid: 7a1acdc01f482c1429f22f31d8b73101, type: 3}
-  reversed: {fileID: -944628639613478452, guid: 7a1acdc01f482c1429f22f31d8b73101, type: 3}
 --- !u!114 &-405093380057160565
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -159,6 +158,7 @@ MonoBehaviour:
   ignoreObstacleCollision: 0
   ObstacleColliders: []
   DurationOfInvulnurability: 3
+  ThresholdForDefaultReposition: 208.5
 --- !u!114 &3503977186915707956
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -248,8 +248,35 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: ffb7dde5-8da3-40ea-a9d9-f8d08352be64
     m_ActionName: inverted/DashDownInverted[/XInputControllerWindows/dpad/right]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: faa807d1-84f4-4859-948a-3951e88ac8e7
+    m_ActionName: Right Side/Jump[/XInputControllerWindows/buttonWest]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: aee569a8-0e7e-4836-9679-6e7bf6186e62
+    m_ActionName: Right Side/Dash Down[/XInputControllerWindows/buttonEast]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Normal
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
+--- !u!114 &795184587734051134
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 493523448001073411}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d3166aa480db05b47bedde77bfce7078, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollsionTag: Spike
+  ParticleSystem: {fileID: 8218331739060808907, guid: 451bb90eeabe1a443895d9f9d2022d53, type: 3}
+  ParticleDestroyTimer: 2.5
+  SpawnPositionOffset: {x: 0, y: 0, z: 0}
+  DoExtraThingsOnCollision:
+    m_PersistentCalls:
+      m_Calls: []
