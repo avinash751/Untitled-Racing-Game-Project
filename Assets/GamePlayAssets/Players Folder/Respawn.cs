@@ -56,29 +56,10 @@ public class Respawn : MonoBehaviour
        ignoreObstacleCollision = true;
         yield return new WaitForSeconds(DurationOfInvulnurability);
         ignoreObstacleCollision = false;
-        foreach (Collider2D obstacle in ObstacleColliders)
-        {
-            Physics2D.IgnoreCollision(gameObject.GetComponent<Collider2D>(), obstacle,false);
-            Debug.Log("collider working");
-        }
 
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if(ignoreObstacleCollision)
-        {
-            if(collision.gameObject.tag == "Spike" || collision.gameObject.tag == "GroundObstacle")
-            {
-                ObstacleColliders.Add(collision.gameObject.GetComponent<Collider2D>());
-            }
-
-            foreach(Collider2D obstacle in ObstacleColliders)
-            {
-                Physics2D.IgnoreCollision(gameObject.GetComponent<Collider2D>(), obstacle);
-            }
-        }
-    }
+   
 
 
 

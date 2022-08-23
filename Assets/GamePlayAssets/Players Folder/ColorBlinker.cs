@@ -39,12 +39,21 @@ public class ColorBlinker : MonoBehaviour
             TimeElapsed += Time.deltaTime;
             SpriteToBlink.color = Color.Lerp(originalColor, ColorToBlinkTo, Amplitude * Mathf.Sin(Time.time *Frequency));
         }
+        else
+        {
+            ResetToOrginalColor();
+        }
     }
 
     public void EnableColorBlinking(bool enable)
     {
         StartBlinking = enable;
         ResetTimeElapsed();
+    }
+
+    void ResetToOrginalColor()
+    {
+        SpriteToBlink.color = originalColor;
     }
 
     void ResetTimeElapsed()
