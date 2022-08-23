@@ -11,31 +11,34 @@ public class WinCheck : MonoBehaviour
     public GameObject PlayerRed;
     public GameObject PlayerWhite;
     public GameObject restartButton;
-
+    bool Winning = false;
     
     public void OnTriggerEnter2D(Collider2D collision)
     {
-        
+        if (this.Winning==true)
+        {
+            return;
+        }
+
         if (collision.gameObject== PlayerWhite)
         {
             PlayerWhiteWin.SetActive(true);
             Debug.Log("player won");
-            
+            this.Winning = true;
         }
         else if (collision.gameObject== PlayerRed)
         {
             PlayerRedWin.SetActive(true);
+            this.Winning = true;
         } 
         
         restartButton.SetActive(true);
-        //RestartGame();
         manager.GameOver();
     }
 
     public void RestartGame()
     {
         SceneManager.LoadScene("Level 1");
-        //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         manager.CurrentGame();
     }
 
