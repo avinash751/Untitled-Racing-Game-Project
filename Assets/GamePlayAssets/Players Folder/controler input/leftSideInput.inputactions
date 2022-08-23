@@ -11,7 +11,7 @@
                     "id": "d25a83ab-0615-46d8-8deb-f7b8adfa4c8b",
                     "expectedControlType": "Dpad",
                     "processors": "",
-                    "interactions": "",
+                    "interactions": "Press",
                     "initialStateCheck": true
                 },
                 {
@@ -20,7 +20,7 @@
                     "id": "61a8d3e1-67d1-44b1-8946-c49a5a498a0f",
                     "expectedControlType": "Dpad",
                     "processors": "",
-                    "interactions": "",
+                    "interactions": "Press",
                     "initialStateCheck": true
                 }
             ],
@@ -81,7 +81,7 @@
                     "id": "7627e96d-b429-4fde-8a89-245cef16ebb6",
                     "expectedControlType": "Dpad",
                     "processors": "",
-                    "interactions": "",
+                    "interactions": "Press",
                     "initialStateCheck": true
                 },
                 {
@@ -151,7 +151,7 @@
                     "id": "faa807d1-84f4-4859-948a-3951e88ac8e7",
                     "expectedControlType": "Button",
                     "processors": "",
-                    "interactions": "",
+                    "interactions": "Press",
                     "initialStateCheck": false
                 },
                 {
