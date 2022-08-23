@@ -281,11 +281,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 493523448001073420, guid: 8b65bef9d83ad0747b06b66c39efa103, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -4.0777836
+      value: -4
       objectReference: {fileID: 0}
     - target: {fileID: 493523448001073420, guid: 8b65bef9d83ad0747b06b66c39efa103, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -4.4260817
+      value: -4.262692
       objectReference: {fileID: 0}
     - target: {fileID: 493523448001073420, guid: 8b65bef9d83ad0747b06b66c39efa103, type: 3}
       propertyPath: m_LocalPosition.z
@@ -3049,7 +3049,7 @@ GameObject:
   - component: {fileID: 983514595}
   - component: {fileID: 983514594}
   m_Layer: 5
-  m_Name: White Win
+  m_Name: blue Win
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3095,7 +3095,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Player WHITE won!
+  m_text: Player BLUE won!
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 2e498d1c8094910479dc3e1b768306a4, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 2e498d1c8094910479dc3e1b768306a4, type: 2}
@@ -5537,11 +5537,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4507245842764869862, guid: 8824c270c9ef31c4f864662d1b144b76, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -4.474439
+      value: -4
       objectReference: {fileID: 0}
     - target: {fileID: 4507245842764869862, guid: 8824c270c9ef31c4f864662d1b144b76, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.9126921
+      value: 0.82
       objectReference: {fileID: 0}
     - target: {fileID: 4507245842764869862, guid: 8824c270c9ef31c4f864662d1b144b76, type: 3}
       propertyPath: m_LocalPosition.z

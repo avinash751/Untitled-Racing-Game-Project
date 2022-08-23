@@ -11,9 +11,9 @@ public class Controls : MonoBehaviour
     public bool Grounded=true;
     bool canDash = true;
     bool isDashing;
-    float DashingPower = 25f;
+    float DashingPower = 15f;
     float DashingTime = 0.2f;
-    float DashingCooldown = 1f;
+    float DashingCooldown = 0.2f;
 
     void Start()
     {
@@ -26,10 +26,12 @@ public class Controls : MonoBehaviour
     void Update()
     {
        
-        if(isDashing)
+        /*if(isDashing)
         {
             return;
-        }
+        }*/
+
+
         transform.Translate(Vector2.right * Time.deltaTime * speed);
         
         if(Input.GetKeyDown(KeyCode.U) && Grounded)
@@ -58,7 +60,7 @@ public class Controls : MonoBehaviour
     {
         canDash = false;
         isDashing = true;
-        rb.velocity = new Vector2(0f, -transform.localScale.y * DashingPower);
+        rb.velocity = new Vector2(0f, -transform.up .y * DashingPower);
         yield return new WaitForSeconds(DashingTime);
         isDashing = false;
         yield return new WaitForSeconds(DashingCooldown);
