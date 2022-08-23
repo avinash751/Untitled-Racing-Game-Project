@@ -5,6 +5,8 @@ using UnityEngine;
 public class changeColorOnHit : MonoBehaviour
 
 {
+
+    public Color colortolerp;
     SpriteRenderer coloreto;
 
     public bool Startlurping;

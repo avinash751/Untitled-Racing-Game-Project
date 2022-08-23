@@ -1674,6 +1674,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f231c4fb786f3946a6b90b886c48677, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_SendPointerHoverToParent: 1
   m_HorizontalAxis: Horizontal
   m_VerticalAxis: Vertical
   m_SubmitButton: Submit
@@ -2208,6 +2209,19 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 493523448001073420, guid: 8b65bef9d83ad0747b06b66c39efa103, type: 3}
   m_PrefabInstance: {fileID: 87307735}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &593574761
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 593574732}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3306d84fac690c64db2d0f44baae5353, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Startlurping: 0
 --- !u!1 &632719643
 GameObject:
   m_ObjectHideFlags: 0
