@@ -72,6 +72,7 @@ public class Controls : MonoBehaviour
     {
         if(Grounded)
         {
+          
             rb.AddForce(Vector2.up * jumpAmount, ForceMode2D.Impulse);
             Grounded = false;
         }
@@ -82,6 +83,7 @@ public class Controls : MonoBehaviour
     {
         if(canDash)
         {
+             GetComponent<PlayASound>().PlaySound();
             StartCoroutine(DashingDown());
         }
        

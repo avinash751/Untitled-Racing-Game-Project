@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 3922175574686112036}
   - component: {fileID: 2609757939980833339}
   m_Layer: 0
-  m_Name: Spikes
+  m_Name: Spikes - Copy
   m_TagString: Spike
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -125,3 +125,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerrespawn: {fileID: 0}
+  DoExtraThingsOnCollision:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 795184587734051134, guid: 8b65bef9d83ad0747b06b66c39efa103, type: 3}
+        m_TargetAssemblyTypeName: SpawnParticlesOnCollsion, Assembly-CSharp
+        m_MethodName: SpawnParticleSystemThenDestroy
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Transform, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
