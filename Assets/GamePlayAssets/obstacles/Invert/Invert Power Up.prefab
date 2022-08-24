@@ -143,12 +143,13 @@ MonoBehaviour:
   ParticleDestroyTimer: 1.5
   SpawnPositionOffset: {x: 0, y: 0.5, z: 0}
   SpawnFromAnotherEvent: 0
+  EnableExtraThingsOnCollsionOnly: 0
   DoExtraThingsOnCollision:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 7573475538733363321}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
+      - m_Target: {fileID: 7573475538733363323}
+        m_TargetAssemblyTypeName: UnityEngine.Renderer, UnityEngine
+        m_MethodName: set_enabled
         m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

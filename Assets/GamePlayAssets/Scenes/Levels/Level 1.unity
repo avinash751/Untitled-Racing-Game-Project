@@ -251,6 +251,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -4271029682054171850, guid: 8b65bef9d83ad0747b06b66c39efa103, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: -405093380057160565, guid: 8b65bef9d83ad0747b06b66c39efa103, type: 3}
       propertyPath: DurationOfInvulnurability
       value: 3
@@ -334,6 +338,34 @@ PrefabInstance:
     - target: {fileID: 795184587734051134, guid: 8b65bef9d83ad0747b06b66c39efa103, type: 3}
       propertyPath: SpawnFromAnotherEvent
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 795184587734051134, guid: 8b65bef9d83ad0747b06b66c39efa103, type: 3}
+      propertyPath: EnableExtraThingsOnCollsionOnly
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 795184587734051134, guid: 8b65bef9d83ad0747b06b66c39efa103, type: 3}
+      propertyPath: DoExtraThingsOnCollision.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 795184587734051134, guid: 8b65bef9d83ad0747b06b66c39efa103, type: 3}
+      propertyPath: DoExtraThingsOnCollision.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 593574762}
+    - target: {fileID: 795184587734051134, guid: 8b65bef9d83ad0747b06b66c39efa103, type: 3}
+      propertyPath: DoExtraThingsOnCollision.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: PlaySound
+      objectReference: {fileID: 0}
+    - target: {fileID: 795184587734051134, guid: 8b65bef9d83ad0747b06b66c39efa103, type: 3}
+      propertyPath: DoExtraThingsOnCollision.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: PlayASound, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 795184587734051134, guid: 8b65bef9d83ad0747b06b66c39efa103, type: 3}
+      propertyPath: DoExtraThingsOnCollision.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 795184587734051134, guid: 8b65bef9d83ad0747b06b66c39efa103, type: 3}
+      propertyPath: DoExtraThingsOnCollision.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 2099929597794349963, guid: 8b65bef9d83ad0747b06b66c39efa103, type: 3}
       propertyPath: Duration
@@ -2226,6 +2258,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colortolerp: {r: 0.96060586, g: 1, b: 0, a: 0}
   Startlurping: 0
+--- !u!114 &593574762 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: -4271029682054171850, guid: 8b65bef9d83ad0747b06b66c39efa103, type: 3}
+  m_PrefabInstance: {fileID: 87307735}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 593574732}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0a388a38c5d3834c8c4a04753e9253e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &632719643
 GameObject:
   m_ObjectHideFlags: 0
@@ -4186,6 +4229,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4507245842764869862, guid: 8824c270c9ef31c4f864662d1b144b76, type: 3}
   m_PrefabInstance: {fileID: 1750716347}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1407444439 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6349251958875707107, guid: 8824c270c9ef31c4f864662d1b144b76, type: 3}
+  m_PrefabInstance: {fileID: 1750716347}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1407444416}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0a388a38c5d3834c8c4a04753e9253e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1415152698
 GameObject:
   m_ObjectHideFlags: 0
@@ -5541,6 +5595,34 @@ PrefabInstance:
       propertyPath: SpawnFromAnotherEvent
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: -2360924686395463542, guid: 8824c270c9ef31c4f864662d1b144b76, type: 3}
+      propertyPath: EnableExtraThingsOnCollsionOnly
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -2360924686395463542, guid: 8824c270c9ef31c4f864662d1b144b76, type: 3}
+      propertyPath: DoExtraThingsOnCollision.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -2360924686395463542, guid: 8824c270c9ef31c4f864662d1b144b76, type: 3}
+      propertyPath: DoExtraThingsOnCollision.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -2360924686395463542, guid: 8824c270c9ef31c4f864662d1b144b76, type: 3}
+      propertyPath: DoExtraThingsOnCollision.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1407444439}
+    - target: {fileID: -2360924686395463542, guid: 8824c270c9ef31c4f864662d1b144b76, type: 3}
+      propertyPath: DoExtraThingsOnCollision.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -2360924686395463542, guid: 8824c270c9ef31c4f864662d1b144b76, type: 3}
+      propertyPath: DoExtraThingsOnCollision.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: PlaySound
+      objectReference: {fileID: 0}
+    - target: {fileID: -2360924686395463542, guid: 8824c270c9ef31c4f864662d1b144b76, type: 3}
+      propertyPath: DoExtraThingsOnCollision.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: PlayASound, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 689217116703702591, guid: 8824c270c9ef31c4f864662d1b144b76, type: 3}
       propertyPath: m_Enabled
       value: 1
@@ -5656,6 +5738,14 @@ PrefabInstance:
     - target: {fileID: 4507245842764869884, guid: 8824c270c9ef31c4f864662d1b144b76, type: 3}
       propertyPath: m_Name
       value: Player 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6349251958875707107, guid: 8824c270c9ef31c4f864662d1b144b76, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6349251958875707107, guid: 8824c270c9ef31c4f864662d1b144b76, type: 3}
+      propertyPath: AmmountOfAudioSourcessRequired
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8824c270c9ef31c4f864662d1b144b76, type: 3}
