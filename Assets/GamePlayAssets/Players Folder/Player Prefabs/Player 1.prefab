@@ -18,6 +18,7 @@ GameObject:
   - component: {fileID: 795184587734051134}
   - component: {fileID: 2529641887993965316}
   - component: {fileID: 2099929597794349963}
+  - component: {fileID: -4271029682054171850}
   m_Layer: 0
   m_Name: Player 1
   m_TagString: Player
@@ -282,7 +283,19 @@ MonoBehaviour:
   SpawnFromAnotherEvent: 0
   DoExtraThingsOnCollision:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2529641887993965316}
+        m_TargetAssemblyTypeName: PlayASound, Assembly-CSharp
+        m_MethodName: PlaySound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2529641887993965316
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -320,3 +333,20 @@ MonoBehaviour:
   Duration: 4.5
   Frequency: 25
   Amplitude: 0.8
+--- !u!114 &-4271029682054171850
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 493523448001073411}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0a388a38c5d3834c8c4a04753e9253e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AllAudioSources: []
+  AmmountOfAudioSourcessRequired: 1
+  AudioFile: {fileID: 8300000, guid: 5cda7ff27219dfa4c8a0a829e45d458f, type: 3}
+  AudioVolume: 0.97
+  AudioPitch: 1.49

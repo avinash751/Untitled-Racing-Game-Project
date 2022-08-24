@@ -19,6 +19,7 @@ GameObject:
   - component: {fileID: -2360924686395463542}
   - component: {fileID: 689217116703702591}
   - component: {fileID: -5304598937541022610}
+  - component: {fileID: 6349251958875707107}
   m_Layer: 0
   m_Name: Player 2
   m_TagString: Player
@@ -235,6 +236,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3306d84fac690c64db2d0f44baae5353, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  colortolerp: {r: 0, g: 0, b: 0, a: 0}
+  Startlurping: 0
 --- !u!114 &-6701535874981910141
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -271,7 +274,19 @@ MonoBehaviour:
   SpawnFromAnotherEvent: 0
   DoExtraThingsOnCollision:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2529641887993965316, guid: 8b65bef9d83ad0747b06b66c39efa103, type: 3}
+        m_TargetAssemblyTypeName: PlayASound, Assembly-CSharp
+        m_MethodName: PlaySound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &689217116703702591
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -309,3 +324,20 @@ MonoBehaviour:
   Duration: 4.5
   Frequency: 25
   Amplitude: 0.8
+--- !u!114 &6349251958875707107
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4507245842764869884}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0a388a38c5d3834c8c4a04753e9253e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AllAudioSources: []
+  AmmountOfAudioSourcessRequired: 1
+  AudioFile: {fileID: 8300000, guid: 5cda7ff27219dfa4c8a0a829e45d458f, type: 3}
+  AudioVolume: 0.97
+  AudioPitch: 1.49
