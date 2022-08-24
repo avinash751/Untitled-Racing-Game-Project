@@ -271,11 +271,12 @@ MonoBehaviour:
   ParticleSystem: {fileID: 8218331739060808907, guid: 451bb90eeabe1a443895d9f9d2022d53, type: 3}
   ParticleDestroyTimer: 2.5
   SpawnPositionOffset: {x: 0, y: 0, z: 0}
-  SpawnFromAnotherEvent: 0
+  SpawnFromAnotherEvent: 1
+  EnableExtraThingsOnCollsionOnly: 1
   DoExtraThingsOnCollision:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2529641887993965316, guid: 8b65bef9d83ad0747b06b66c39efa103, type: 3}
+      - m_Target: {fileID: -4271029682054171850, guid: 8b65bef9d83ad0747b06b66c39efa103, type: 3}
         m_TargetAssemblyTypeName: PlayASound, Assembly-CSharp
         m_MethodName: PlaySound
         m_Mode: 1
@@ -301,6 +302,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   AllAudioSources: []
   AmmountOfAudioSourcessRequired: 3
+  index: 0
   AudioFile: {fileID: 8300000, guid: 764cce1ac3653914f8390a2333f2fa59, type: 3}
   AudioVolume: 0.5
   AudioPitch: 0.93
@@ -338,6 +340,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   AllAudioSources: []
   AmmountOfAudioSourcessRequired: 1
+  index: 0
   AudioFile: {fileID: 8300000, guid: 5cda7ff27219dfa4c8a0a829e45d458f, type: 3}
   AudioVolume: 0.97
   AudioPitch: 1.49
