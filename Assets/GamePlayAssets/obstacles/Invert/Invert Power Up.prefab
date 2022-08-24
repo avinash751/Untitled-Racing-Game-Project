@@ -29,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 7573475538733363321}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -2.08, y: -1.87, z: 0}
-  m_LocalScale: {x: 0.61347705, y: 0.61347705, z: 0.61347705}
+  m_LocalScale: {x: 0.098340444, y: 0.11431939, z: 0.61347705}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -76,8 +76,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 1, g: 0, b: 0.9822674, a: 1}
+  m_Sprite: {fileID: 21300000, guid: 1bf50a223c04b284ebbf1ed07b5817f5, type: 3}
+  m_Color: {r: 0.2269491, g: 0.6415094, b: 0.56141526, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -104,14 +104,14 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
+    oldSize: {x: 10.24, y: 9.11}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 9.96, y: 8.85}
   m_EdgeRadius: 0
 --- !u!114 &6724038661957606243
 MonoBehaviour:
@@ -142,6 +142,7 @@ MonoBehaviour:
   ParticleSystem: {fileID: 2424434933820952305, guid: 7349fd7382b3baa4daaf07f4f1f86a66, type: 3}
   ParticleDestroyTimer: 1.5
   SpawnPositionOffset: {x: 0, y: 0.5, z: 0}
+  SpawnFromAnotherEvent: 0
   DoExtraThingsOnCollision:
     m_PersistentCalls:
       m_Calls:
