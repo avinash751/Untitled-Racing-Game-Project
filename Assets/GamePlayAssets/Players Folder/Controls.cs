@@ -14,9 +14,11 @@ public class Controls : MonoBehaviour
     float DashingPower = 25f;
     float DashingTime = 0.2f;
     float DashingCooldown = 1f;
+    AudioSource jumpsound;
 
     void Start()
     {
+        jumpsound = GetComponent<AudioSource>();
         
         Grounded = true;
         rb = GetComponent<Rigidbody2D>();   
@@ -73,6 +75,8 @@ public class Controls : MonoBehaviour
           
             rb.AddForce(Vector2.up * jumpAmount, ForceMode2D.Impulse);
             Grounded = false;
+
+            jumpsound.Play();
         }
        
     }
