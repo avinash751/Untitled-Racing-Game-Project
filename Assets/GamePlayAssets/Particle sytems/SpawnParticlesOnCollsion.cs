@@ -10,6 +10,7 @@ public class SpawnParticlesOnCollsion : MonoBehaviour
     [SerializeField] float ParticleDestroyTimer;
     [SerializeField] Vector3 SpawnPositionOffset;
     [SerializeField] bool SpawnFromAnotherEvent;
+    [SerializeField] bool EnableExtraThingsOnCollsionOnly;
 
     [Header("DO more after collsion,if needed")]
     [SerializeField] UnityEvent DoExtraThingsOnCollision;
@@ -22,6 +23,11 @@ public class SpawnParticlesOnCollsion : MonoBehaviour
             SpawnParticleSystemThenDestroy(collision.transform);
             DoExtraThingsOnCollision.Invoke();
         }
+       if(collision.gameObject.tag == CollsionTag && EnableExtraThingsOnCollsionOnly)
+        {
+            DoExtraThingsOnCollision.Invoke();
+            Debug.Log("sound function called");
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -30,6 +36,11 @@ public class SpawnParticlesOnCollsion : MonoBehaviour
         {
             SpawnParticleSystemThenDestroy(collision.transform);
             DoExtraThingsOnCollision.Invoke();
+        }
+        if (collision.gameObject.tag == CollsionTag && EnableExtraThingsOnCollsionOnly)
+        {
+            DoExtraThingsOnCollision.Invoke();
+            Debug.Log("sound function called");
         }
     }
 

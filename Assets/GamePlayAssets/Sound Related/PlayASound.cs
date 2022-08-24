@@ -7,7 +7,7 @@ public class PlayASound : MonoBehaviour
 {
     public  AudioSource[] AllAudioSources;
     [SerializeField] int AmmountOfAudioSourcessRequired;
-    int index;
+    public int index;
 
     [Header("Audio Clip Settings")]
     [SerializeField] AudioClip AudioFile;
