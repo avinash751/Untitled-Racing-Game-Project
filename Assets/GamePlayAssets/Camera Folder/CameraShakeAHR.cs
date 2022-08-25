@@ -12,16 +12,19 @@ public class CameraShakeAHR : MonoBehaviour
 
     public bool cameraShakeEnabled = false;
 
+    Transform startposition;
+
     public float counter ;
     // Start is called before the first frame update
     void Start()
     {
-
+        startposition = gameObject.transform;
     }
 
     private void Update()
     {
-       
+        CameraShake();
+        
     }
 
     void CameraShake()
@@ -36,17 +39,20 @@ public class CameraShakeAHR : MonoBehaviour
         }
         else
         {
-            cameraShakeEnabled = false;
+            EnableCamersShake(false);
         }
     }
 
     public void EnableCamersShake(bool enable)
     {
+        gameObject.transform.position = new Vector3(startposition.position.x, startposition.position.y, gameObject.transform.position.z);  
         cameraShakeEnabled = enable;
     }
 
-    public void SetCameraShakeValues(float Frequency,float Amplitude)
+    public void SetCameraShakeValues(float Frequency,float Amplitude, float duration)
+
     {
+        counter = duration;
         amplitude = Amplitude;
         frequency = Frequency;
     }

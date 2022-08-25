@@ -6,13 +6,18 @@ using UnityEngine.Events;
 public class SpikeDeathController : MonoBehaviour
 {
     public Respawn playerrespawn;
-
+    public CameraShakeAHR camerashake;
     //Andrew's Code
     void OnCollisionEnter2D(Collision2D collision)
     {
         playerrespawn = collision.gameObject.GetComponent<Respawn>();
         if (collision.gameObject.CompareTag("Player") && !playerrespawn.ignoreObstacleCollision)
         {
+
+            camerashake.SetCameraShakeValues(1f, 1f, 2f);
+
+            camerashake.EnableCamersShake(true);
+
             collision.gameObject.GetComponent<SpriteRenderer>().enabled = false;
             collision.gameObject.GetComponent<TrailRenderer>().enabled = false;
             StartCoroutine(DisableGameObjectAfterDelay(1f, collision.gameObject));
