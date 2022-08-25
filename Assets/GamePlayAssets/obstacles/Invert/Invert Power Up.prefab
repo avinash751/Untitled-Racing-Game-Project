@@ -127,6 +127,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Time: 4
+  inverted: 0
 --- !u!114 &-8091977409852731130
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -143,8 +144,7 @@ MonoBehaviour:
   ParticleSystem: {fileID: 2424434933820952305, guid: 7349fd7382b3baa4daaf07f4f1f86a66, type: 3}
   ParticleDestroyTimer: 1.5
   SpawnPositionOffset: {x: 0, y: 0.5, z: 0}
-  SpawnFromAnotherEvent: 0
-  EnableExtraThingsOnCollsionOnly: 0
+  SpawnFromAnotherEvent: 1
   DoExtraThingsOnCollision:
     m_PersistentCalls:
       m_Calls:

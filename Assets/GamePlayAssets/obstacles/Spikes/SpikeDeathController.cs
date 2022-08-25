@@ -14,9 +14,10 @@ public class SpikeDeathController : MonoBehaviour
         if (collision.gameObject.CompareTag("Player") && !playerrespawn.ignoreObstacleCollision)
         {
             collision.gameObject.GetComponent<SpriteRenderer>().enabled = false;
+            collision.gameObject.GetComponent<TrailRenderer>().enabled = false;
             StartCoroutine(DisableGameObjectAfterDelay(1f, collision.gameObject));
-            collision.gameObject.GetComponent<SpawnParticlesOnCollsion>().SpawnParticleSystemThenDestroy(collision.transform); // line added by avinash
-           
+            collision.gameObject.GetComponent<SpawnParticlesOnCollsion>().SpawnParticleSystemThenDestroy(collision.transform); // line added by avinash , adding partcile system
+            collision.gameObject.GetComponent<SpawnParticlesOnCollsion>().DoExtraThingsOnCollision.Invoke();
         }
     }
 

@@ -35,7 +35,7 @@ public class PlayASound : MonoBehaviour
             a.volume = AudioVolume;
             a.pitch = AudioPitch;
             a.playOnAwake = false;
-            Debug.Log(a);
+            //Debug.Log(a);
         }
     }
     public void PlaySound()
@@ -48,7 +48,7 @@ public class PlayASound : MonoBehaviour
         {
             AllAudioSources[index].Play();
             index++;
-            Debug.Log("sound played");
+           // Debug.Log("sound played");
         }
     }
 

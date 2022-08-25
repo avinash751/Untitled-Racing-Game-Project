@@ -8,20 +8,23 @@ public class changeColorOnHit : MonoBehaviour
 
     public Color colortolerp;
     SpriteRenderer coloreto;
+    public Color startColor;
+    public float elapsedTime;
 
     public bool Startlurping;
     
     void Start()
     {
         coloreto = GetComponent<SpriteRenderer>();
+        startColor = coloreto.color; // getting sprite initial start color
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("InvrtPOW"))
+        if (collision.gameObject.CompareTag("InvrtPOW") && !collision.gameObject.GetComponent<InvertPWUPController>().inverted)
         {
 
-            coloreto.color = new Color(3, 0, 2);
+            coloreto.color = new Color(colortolerp.r, colortolerp.g, colortolerp.b);
 
 
             Startlurping = true;
@@ -34,9 +37,12 @@ public class changeColorOnHit : MonoBehaviour
   
 
     void Update()
-    {   if (Startlurping)
+    { 
+       
+        if (Startlurping )
         {
-            coloreto.color = Color.Lerp(coloreto.color, Color.black, Time.deltaTime / 2f);
+            elapsedTime += Time.deltaTime;
+            coloreto.color = Color.Lerp(coloreto.color, startColor, Time.deltaTime / 4f);
         }
         
             
