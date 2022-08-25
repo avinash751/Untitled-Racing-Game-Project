@@ -27,11 +27,7 @@ public class Controls : MonoBehaviour
 
     void Update()
     {
-       
-        if(isDashing)
-        {
-            return;
-        }
+      
         transform.Translate(Vector2.right * Time.deltaTime * speed);
         
         if(Input.GetKeyDown(KeyCode.U) && Grounded)

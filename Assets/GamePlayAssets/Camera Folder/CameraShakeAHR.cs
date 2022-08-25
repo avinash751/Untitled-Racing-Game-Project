@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class CameraShakeAHR : MonoBehaviour
 {
-    private float time = 0;
+    private float time;
     [Range(0, 50)]
     public float frequency;
     [Range(0, 10)]
@@ -12,7 +12,7 @@ public class CameraShakeAHR : MonoBehaviour
 
     public bool cameraShakeEnabled = false;
 
-    public float counter = 3;
+    public float counter ;
     // Start is called before the first frame update
     void Start()
     {
@@ -21,20 +21,33 @@ public class CameraShakeAHR : MonoBehaviour
 
     private void Update()
     {
-        CameraShake();
+       
     }
 
-    public void CameraShake()
+    void CameraShake()
     {
         time += Time.deltaTime;
-        if (time < counter)
+        if (time < counter && cameraShakeEnabled)
         {
             cameraShakeEnabled = true;
             float x = amplitude * Mathf.Sin(Time.time * frequency);
             float y = amplitude * Mathf.Sin(Time.time * frequency);
             transform.localPosition = new Vector3(x, y, transform.localPosition.z);
-
-            counter = 0;
         }
+        else
+        {
+            cameraShakeEnabled = false;
+        }
+    }
+
+    public void EnableCamersShake(bool enable)
+    {
+        cameraShakeEnabled = enable;
+    }
+
+    public void SetCameraShakeValues(float Frequency,float Amplitude)
+    {
+        amplitude = Amplitude;
+        frequency = Frequency;
     }
 }
