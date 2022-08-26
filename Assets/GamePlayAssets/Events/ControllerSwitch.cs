@@ -15,6 +15,8 @@ public class ControllerSwitch : MonoBehaviour
     public UnityEvent PlayEventOnCollsion;
     public bool switched;
 
+    public CameraShakeAHR camerashake;
+
 
     private void Awake()
     {
@@ -27,6 +29,11 @@ public class ControllerSwitch : MonoBehaviour
         
         if (collision.gameObject.CompareTag("Player") && !switched)
         {
+            camerashake.SetCameraShakeValues(75, 0.2f, 0.5f);
+
+            camerashake.EnableCamersShake(true);
+           
+
             switched = true;
             controlswitch = collision.gameObject.GetComponent<PlayerInput>();
             AllPlayers[1].GetComponent<PlayerInput>().actions = RightSide;
