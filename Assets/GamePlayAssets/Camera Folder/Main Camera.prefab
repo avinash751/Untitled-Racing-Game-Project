@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 3733639047573033047}
   - component: {fileID: 3129136981857666597}
   - component: {fileID: 3823701919083608719}
+  - component: {fileID: 537353480}
   m_Layer: 6
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -31,7 +32,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3733639047573033037}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4, y: 0, z: -10}
+  m_LocalPosition: {x: -4, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -189,6 +190,23 @@ MonoBehaviour:
   ParticleSystem: {fileID: 8218331739060808907, guid: 451bb90eeabe1a443895d9f9d2022d53, type: 3}
   ParticleDestroyTimer: 3
   SpawnPositionOffset: {x: 2.5, y: 0.6, z: 0}
+  SpawnFromAnotherEvent: 0
   DoExtraThingsOnCollision:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &537353480
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3733639047573033037}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 439db852785f32f448d7ec52857b0a44, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  frequency: 25.3
+  amplitude: 0.2
+  cameraShakeEnabled: 1
+  counter: 3

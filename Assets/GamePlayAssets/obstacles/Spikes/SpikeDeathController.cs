@@ -13,9 +13,7 @@ public class SpikeDeathController : MonoBehaviour
         playerrespawn = collision.gameObject.GetComponent<Respawn>();
         if (collision.gameObject.CompareTag("Player") && !playerrespawn.ignoreObstacleCollision)
         {
-
-            camerashake.SetCameraShakeValues(1f, 1f, 2f);
-
+            camerashake.SetCameraShakeValues(55, 0.2f, 0.3f);
             camerashake.EnableCamersShake(true);
 
             collision.gameObject.GetComponent<SpriteRenderer>().enabled = false;

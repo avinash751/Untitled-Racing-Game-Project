@@ -9,11 +9,11 @@ public class Controls : MonoBehaviour
     public int speed;
     public int jumpAmount;
     public bool Grounded=true;
-    bool canDash = true;
-    bool isDashing;
-    float DashingPower = 25f;
-    float DashingTime = 0.2f;
-    float DashingCooldown = 1f;
+    public bool canDash = true;
+    public  bool isDashing;
+    public float DashingPower = 25f;
+    public float DashingTime = 0.2f;
+    public float DashingCooldown = 1f;
     AudioSource jumpsound;
 
     void Start()
@@ -55,10 +55,7 @@ public class Controls : MonoBehaviour
     IEnumerator DashingDown()
     {
         canDash = false;
-        isDashing = true;
         rb.velocity = new Vector2(0f, -transform.localScale.y * DashingPower);
-        yield return new WaitForSeconds(DashingTime);
-        isDashing = false;
         yield return new WaitForSeconds(DashingCooldown);
         canDash = true;
     }

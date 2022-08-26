@@ -127,6 +127,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Time: 4
+  camerashake: {fileID: 537353480, guid: ae334fdbe03778b418cb2673a2dd25c5, type: 3}
   inverted: 0
 --- !u!114 &-8091977409852731130
 MonoBehaviour:
@@ -185,7 +186,7 @@ AudioSource:
   m_audioClip: {fileID: 8300000, guid: 5cda7ff27219dfa4c8a0a829e45d458f, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
-  m_Pitch: 1
+  m_Pitch: 1.5
   Loop: 0
   Mute: 0
   Spatialize: 0

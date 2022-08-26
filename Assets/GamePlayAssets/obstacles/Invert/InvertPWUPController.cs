@@ -8,6 +8,7 @@ public class InvertPWUPController : MonoBehaviour
     PlayerInput playercontrol;
     bool controlinvert;
     public float Time;
+   
     
     public bool inverted;
 
@@ -24,9 +25,9 @@ public class InvertPWUPController : MonoBehaviour
             Debug.Log("inverted");
             Invoke(nameof(disableinvertcontrols), Time); // humaid's code
             Invoke(nameof(SetInvertedBool), 0.02f); // avinash code
-            GetComponent<SpawnParticlesOnCollsion>().SpawnParticleSystemThenDestroy(collision.transform);
-            GetComponent<SpawnParticlesOnCollsion>().DoExtraThingsOnCollision.Invoke();
-
+            GetComponent<SpawnParticlesOnCollsion>().SpawnParticleSystemThenDestroy(collision.transform);// avinash code , particls ystem
+            GetComponent<SpawnParticlesOnCollsion>().DoExtraThingsOnCollision.Invoke();// avinash code, sound for explosion
+        
         }
    
 
