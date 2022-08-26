@@ -25,12 +25,15 @@ public class wallCollider : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
-            collision.gameObject.SetActive(false);
-
+            collision.gameObject.GetComponent<SpawnParticlesOnCollsion>().DoExtraThingsOnCollision.Invoke(); // this is for playing the sound fcuntion from the do extrathings on collsion event from the player game object
+            StartCoroutine(DisableGameObjectAfterDelay(0.5f, collision.gameObject)); 
             Debug.Log ("object disabled");
         }
     }
 
-   
-
+    IEnumerator DisableGameObjectAfterDelay(float delayTime, GameObject ObjectToDisable) // a delay function , when called you can specify which game object to disable and amount of duration, normally not possible with invoke
+    {
+        yield return new WaitForSeconds(delayTime);
+        ObjectToDisable.gameObject.SetActive(false);
+    }
 }

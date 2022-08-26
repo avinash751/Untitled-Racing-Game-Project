@@ -13,6 +13,7 @@ public class ControllerSwitch : MonoBehaviour
     [SerializeField] float time;
     [Header("Do more on collsion, if needed")]
     public UnityEvent PlayEventOnCollsion;
+    public bool switched;
 
 
     private void Awake()
@@ -24,11 +25,12 @@ public class ControllerSwitch : MonoBehaviour
     void OnTriggerEnter2D(Collider2D collision)
     {
         
-        if (collision.gameObject.CompareTag("Player"))
+        if (collision.gameObject.CompareTag("Player") && !switched)
         {
+            switched = true;
             controlswitch = collision.gameObject.GetComponent<PlayerInput>();
-            AllPlayers[0].GetComponent<PlayerInput>().actions = RightSide;
-            AllPlayers[1].GetComponent<PlayerInput>().actions = LeftSide;
+            AllPlayers[1].GetComponent<PlayerInput>().actions = RightSide;
+            AllPlayers[0].GetComponent<PlayerInput>().actions = LeftSide;
             Invoke(nameof(SwitchBackToNormalControls), time);
             PlayEventOnCollsion.Invoke();
             Debug.Log("switch side");
@@ -36,8 +38,9 @@ public class ControllerSwitch : MonoBehaviour
     }
     void SwitchBackToNormalControls()
     {
-        AllPlayers[0].GetComponent<PlayerInput>().actions = LeftSide;
-        AllPlayers[1].GetComponent<PlayerInput>().actions = RightSide;
+        switched = false;
+        AllPlayers[1].GetComponent<PlayerInput>().actions = LeftSide;
+        AllPlayers[0].GetComponent<PlayerInput>().actions = RightSide;
         Debug.Log("switched back");
     }
 }
