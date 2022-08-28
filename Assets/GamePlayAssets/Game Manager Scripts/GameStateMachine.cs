@@ -19,17 +19,30 @@ public class GameStateMachine : MonoBehaviour
     }
     public void StartGame()
     {
-        Time.timeScale = 0;
+        
         gamestate = GameState.Start;
         StartButton.SetActive(true);
+
+        Camera.main.GetComponent<Camerahumaid>().speed = 0;
+        Controls[] AllPlayer = FindObjectsOfType<Controls>();
+        foreach(Controls c in AllPlayer)
+        {
+            c.speed = 0;
+        }
     }
 
     // Update is called once per frame
     public void CurrentGame()
     {
         gamestate = GameState.Current;
-        Time.timeScale = 1;
         StartButton.SetActive(false);
+
+        Camera.main.GetComponent<Camerahumaid>().speed = 8;
+        Controls[] AllPlayer = FindObjectsOfType<Controls>();
+        foreach (Controls c in AllPlayer)
+        {
+            c.speed = 8;
+        }
     }
 
     public void GameOver()
