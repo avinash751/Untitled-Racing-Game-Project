@@ -27,14 +27,10 @@ public class changeColorOnHit : MonoBehaviour
             coloreto.color = new Color(colortolerp.r, colortolerp.g, colortolerp.b);
 
 
-            Startlurping = true;
-
-            
-            
+            Startlurping = true;  
         }
     }
 
-  
 
     void Update()
     { 
