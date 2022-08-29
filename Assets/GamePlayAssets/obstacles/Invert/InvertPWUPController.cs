@@ -8,6 +8,7 @@ public class InvertPWUPController : MonoBehaviour
     PlayerInput playercontrol;
     bool controlinvert;
     public float Time;
+    public CameraShakeAHR camerashake;
    
     
     public bool inverted;
@@ -19,6 +20,10 @@ public class InvertPWUPController : MonoBehaviour
       
         if (collision.gameObject.CompareTag("Player") && !collision.gameObject.GetComponent<Respawn>().ignoreObstacleCollision &&!inverted)
         {
+            camerashake.SetCameraShakeValues(20f, 0.05f, 0.3f);
+
+            camerashake.EnableCamersShake(true);
+
             playercontrol = collision.gameObject.GetComponent<PlayerInput>();
             playercontrol.actions.FindActionMap("Inverted").Enable();
             playercontrol.actions.FindActionMap("Normal").Disable();
