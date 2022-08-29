@@ -14,7 +14,7 @@ public class Controls : MonoBehaviour
     float DashingPower = 15f;
     float DashingTime = 0.2f;
     float DashingCooldown = 0.2f;
-
+    public AudioSource JumpSound;
     void Start()
     {
         
@@ -72,7 +72,7 @@ public class Controls : MonoBehaviour
     {
         if(Grounded)
         {
-          
+            JumpSound.Play();
             rb.AddForce(Vector2.up * jumpAmount, ForceMode2D.Impulse);
             Grounded = false;
         }

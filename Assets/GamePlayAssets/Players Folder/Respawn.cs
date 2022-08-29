@@ -27,7 +27,7 @@ public class Respawn : MonoBehaviour
         if(!Repositioned)
         {
             gameObject.GetComponent<SpriteRenderer>().enabled = true;
-            gameObject.GetComponent<TrailRenderer>().enabled = true;
+            
             RepsoitionPlayer();
             StartCoroutine(ReSetInvulnerability());
             Repositioned=true;

@@ -36,8 +36,8 @@ public class ControllerSwitch : MonoBehaviour
 
             switched = true;
             controlswitch = collision.gameObject.GetComponent<PlayerInput>();
-            AllPlayers[1].GetComponent<PlayerInput>().actions = RightSide;
-            AllPlayers[0].GetComponent<PlayerInput>().actions = LeftSide;
+            AllPlayers[0].GetComponent<PlayerInput>().actions = RightSide;
+            AllPlayers[1].GetComponent<PlayerInput>().actions = LeftSide;
             Invoke(nameof(SwitchBackToNormalControls), time);
             PlayEventOnCollsion.Invoke();
             Debug.Log("switch side");
@@ -46,8 +46,8 @@ public class ControllerSwitch : MonoBehaviour
     void SwitchBackToNormalControls()
     {
         switched = false;
-        AllPlayers[1].GetComponent<PlayerInput>().actions = LeftSide;
-        AllPlayers[0].GetComponent<PlayerInput>().actions = RightSide;
+        AllPlayers[0].GetComponent<PlayerInput>().actions = LeftSide;
+        AllPlayers[1].GetComponent<PlayerInput>().actions = RightSide;
         Debug.Log("switched back");
     }
 }
