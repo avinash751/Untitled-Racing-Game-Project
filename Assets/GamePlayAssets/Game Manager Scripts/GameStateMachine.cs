@@ -22,7 +22,7 @@ public class GameStateMachine : MonoBehaviour
         
         gamestate = GameState.Start;
         StartButton.SetActive(true);
-
+        Time.timeScale = 1;
         Camera.main.GetComponent<Camerahumaid>().speed = 0;
         Controls[] AllPlayer = FindObjectsOfType<Controls>();
         foreach(Controls c in AllPlayer)
@@ -34,15 +34,23 @@ public class GameStateMachine : MonoBehaviour
     // Update is called once per frame
     public void CurrentGame()
     {
-        gamestate = GameState.Current;
-        StartButton.SetActive(false);
-
-        Camera.main.GetComponent<Camerahumaid>().speed = 8;
-        Controls[] AllPlayer = FindObjectsOfType<Controls>();
-        foreach (Controls c in AllPlayer)
+        if(gamestate!=GameState.Current)
         {
-            c.speed = 8;
+            gamestate = GameState.Current;
+            StartButton.SetActive(false);
+
+            Camera.main.GetComponent<Camerahumaid>().speed = 8;
+            Controls[] AllPlayer = FindObjectsOfType<Controls>();
+            foreach (Controls c in AllPlayer)
+            {
+                c.speed = 8;
+            }
         }
+        else
+        {
+            return;
+        }
+       
     }
 
     public void GameOver()

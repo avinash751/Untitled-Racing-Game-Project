@@ -38,8 +38,13 @@ public class WinCheck : MonoBehaviour
 
     public void RestartGame()
     {
-        SceneManager.LoadScene("Level 1");
-        manager.CurrentGame();
+        if(restartButton.activeInHierarchy)
+        {
+            SceneManager.LoadScene("Level 1");
+            manager.StartGame();
+        }
+        return;
+       
     }
 
 
