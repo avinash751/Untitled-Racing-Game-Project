@@ -18,7 +18,7 @@ public class InvertPWUPController : MonoBehaviour
             playercontrol.actions.FindActionMap("Inverted").Enable();
             playercontrol.actions.FindActionMap("Normal").Disable();
             Debug.Log("inverted");
-            Invoke(nameof(disableinvertcontrols), Time); // humaid's code
+            Invoke(nameof(disableinvertcontrols), Time); // line added by humaid
         }
         else
         {
